@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* Design tokens — mirror the Figma variables and the mobile app theme. */
+@theme {
+  --font-display: var(--font-unbounded), system-ui, sans-serif;
+  --font-sans: var(--font-onest), system-ui, sans-serif;
+
+  --color-canvas: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-ink: #0f1b33;
+  --color-ink-2: #1e2c4a;
+  --color-ink-muted: #a8b3cf;
+  --color-muted: #65676b;
+  --color-line: #e4e6eb;
+
+  --color-brand: #1877f2;
+  --color-brand-dark: #0b5fd0;
+  --color-brand-soft: #e7f0fe;
+
+  --color-lime: #c6f432;
+  --color-lime-soft: #f1fccb;
+  --color-lime-ink: #4d7c0f;
+  --color-coral: #ff6b5b;
+  --color-coral-soft: #ffe4e0;
+  --color-coral-ink: #d9412f;
+  --color-sky: #3ec5ff;
+  --color-sky-soft: #ddf5ff;
+  --color-sky-ink: #0a7fb0;
+  --color-sun: #ffd23f;
+  --color-sun-soft: #fff4cc;
+  --color-sun-ink: #a16207;
+  --color-success: #16a34a;
+  --color-success-soft: #dcfce7;
+
+  --shadow-card: 0 8px 24px -8px rgb(15 27 51 / 0.12);
+  --shadow-float: 0 20px 40px -12px rgb(15 27 51 / 0.22);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-rise: rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+/* Soft dotted backdrop used behind hero and onboarding. */
+.bg-dots {
+  background-image: radial-gradient(rgb(15 27 51 / 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

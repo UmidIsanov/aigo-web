@@ -1,0 +1,553 @@
+{
+  "meta": {
+    "title": "AiGo — learn, adapt and create with AI",
+    "description": "A platform for teens aged 10–16: understand how AI is changing the world, learn to work with it and build your own projects."
+  },
+  "nav": {
+    "how": "How it works",
+    "program": "Program",
+    "tutor": "AI Tutor",
+    "parents": "For parents",
+    "start": "Get started",
+    "dashboard": "My dashboard"
+  },
+  "lang": {
+    "label": "Language",
+    "uz": "O‘zbekcha",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "hero": {
+    "badge": "For teens aged 10–16",
+    "title": "The world is changing.",
+    "titleAccent": "Learn to work with AI.",
+    "subtitle": "AI is already changing jobs and the way people learn. With AiGo you’ll understand what’s happening, learn to give AI clear tasks, check its answers and build your own projects.",
+    "cta": "Start for free",
+    "ctaSecondary": "How it works",
+    "you": "YOU",
+    "ai": "AI",
+    "floatCheck": "AI made a mistake — you caught it",
+    "floatXp": "+30 XP",
+    "floatXpLabel": "for fact-checking",
+    "floatTutor": "A hint, not the answer",
+    "trust1": "60% practice",
+    "trust2": "12 modules",
+    "trust3": "Project portfolio"
+  },
+  "stats": {
+    "eyebrow": "What’s happening now",
+    "title": "Work is changing faster than school",
+    "jobsNew": "+170M",
+    "jobsNewLabel": "new jobs will be created by 2030",
+    "jobsGone": "−92M",
+    "jobsGoneLabel": "jobs will disappear or change a lot",
+    "skills": "39%",
+    "skillsLabel": "of key job skills will change by 2030",
+    "source": "Source: World Economic Forum, Future of Jobs Report 2025",
+    "note": "Jobs rarely disappear completely. More often the tasks inside them change: AI takes the routine, and people do the thinking, checking and creating."
+  },
+  "professions": {
+    "eyebrow": "Real examples",
+    "title": "How AI changes work",
+    "subtitle": "See which tasks AI already does, which stay with people, and which work best together.",
+    "actors": {
+      "ai": "AI",
+      "human": "Human",
+      "together": "Together"
+    },
+    "takeawayLabel": "Takeaway",
+    "items": [
+      {
+        "name": "Translator",
+        "tasks": [
+          {
+            "title": "First draft of a long text",
+            "actor": "ai"
+          },
+          {
+            "title": "Translating jokes and wordplay",
+            "actor": "together"
+          },
+          {
+            "title": "Checking meaning and tone",
+            "actor": "human"
+          },
+          {
+            "title": "Live negotiations with people",
+            "actor": "human"
+          },
+          {
+            "title": "Checking terms in a document",
+            "actor": "together"
+          }
+        ],
+        "takeaway": "A draft now takes minutes. What AI does poorly became more valuable: understanding people and context, and owning the result."
+      },
+      {
+        "name": "Designer",
+        "tasks": [
+          {
+            "title": "20 background options in a minute",
+            "actor": "ai"
+          },
+          {
+            "title": "Understanding what users need",
+            "actor": "human"
+          },
+          {
+            "title": "Turning ideas into a layout",
+            "actor": "together"
+          },
+          {
+            "title": "Choosing a style that makes a brand stand out",
+            "actor": "human"
+          },
+          {
+            "title": "Resizing for social media",
+            "actor": "ai"
+          }
+        ],
+        "takeaway": "AI draws options fast but doesn’t know which one solves the problem. Taste and understanding people stay with the designer."
+      },
+      {
+        "name": "Developer",
+        "tasks": [
+          {
+            "title": "Writing standard code from a description",
+            "actor": "ai"
+          },
+          {
+            "title": "Finding the cause of a tricky bug",
+            "actor": "together"
+          },
+          {
+            "title": "Deciding how the system should work",
+            "actor": "human"
+          },
+          {
+            "title": "Making sure the code is secure",
+            "actor": "human"
+          },
+          {
+            "title": "Writing tests and docs",
+            "actor": "together"
+          }
+        ],
+        "takeaway": "AI writes code, but a person is responsible for it. What matters is understanding, checking and testing what AI wrote."
+      },
+      {
+        "name": "Content creator",
+        "tasks": [
+          {
+            "title": "Ideas for 30 videos",
+            "actor": "ai"
+          },
+          {
+            "title": "Your own story and experience",
+            "actor": "human"
+          },
+          {
+            "title": "Script and editing",
+            "actor": "together"
+          },
+          {
+            "title": "Subtitles in 5 languages",
+            "actor": "ai"
+          },
+          {
+            "title": "Talking with your audience",
+            "actor": "human"
+          }
+        ],
+        "takeaway": "AI speeds up content production. But people come for the creator’s personality — and AI can’t replace that."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "How we teach",
+    "title": "Fewer lectures, more doing",
+    "subtitle": "Every lesson is short and quickly moves to practice. Key ideas come back later at a harder level.",
+    "ratioTheory": "theory",
+    "ratioPractice": "practice",
+    "ratioProject": "projects",
+    "steps": [
+      {
+        "title": "Goal",
+        "desc": "What you’ll be able to do after the lesson"
+      },
+      {
+        "title": "Real-life example",
+        "desc": "Where this actually shows up"
+      },
+      {
+        "title": "Short explanation",
+        "desc": "One idea, no long lectures"
+      },
+      {
+        "title": "Demo",
+        "desc": "See how it works"
+      },
+      {
+        "title": "Practice",
+        "desc": "10–12 tasks: Easy → Medium → Challenge"
+      },
+      {
+        "title": "Challenge",
+        "desc": "A problem with no hints"
+      },
+      {
+        "title": "Reflection",
+        "desc": "What worked and what to improve"
+      }
+    ],
+    "loopTitle": "Learning loop",
+    "loop": [
+      "Learn",
+      "Try",
+      "Fail",
+      "Ask AI",
+      "Verify",
+      "Improve",
+      "Build",
+      "Reflect"
+    ]
+  },
+  "program": {
+    "eyebrow": "Program",
+    "title": "12 modules: from understanding AI to your own product",
+    "subtitle": "The first three modules are available now. The rest will open as the platform grows.",
+    "available": "Available",
+    "soon": "Soon",
+    "modules": [
+      {
+        "name": "AI World",
+        "desc": "AI around us, what it can and can’t do"
+      },
+      {
+        "name": "Human Skills",
+        "desc": "Thinking, creativity, asking good questions"
+      },
+      {
+        "name": "AI Interaction",
+        "desc": "Task, context, examples, improving answers"
+      },
+      {
+        "name": "Research & Verification",
+        "desc": "Search, fact-checking and AI hallucinations"
+      },
+      {
+        "name": "AI Creation",
+        "desc": "Text, images, video and audio"
+      },
+      {
+        "name": "AI + Data",
+        "desc": "Documents, tables and visualization"
+      },
+      {
+        "name": "AI + Programming",
+        "desc": "AI writes code — you understand and test it"
+      },
+      {
+        "name": "AI Workflows",
+        "desc": "Several tools in one process"
+      },
+      {
+        "name": "AI Automation",
+        "desc": "Triggers, actions, APIs and webhooks"
+      },
+      {
+        "name": "AI Agents",
+        "desc": "Goal → plan → tool → action"
+      },
+      {
+        "name": "AI Product Building",
+        "desc": "From a problem to your own AI product"
+      },
+      {
+        "name": "Career Adaptability",
+        "desc": "How jobs change and what to learn next"
+      }
+    ]
+  },
+  "tutor": {
+    "eyebrow": "AI Tutor",
+    "title": "Helps you think, not copy",
+    "subtitle": "AI Tutor doesn’t give the answer right away. After a mistake: a hint, another try, a second hint — and only then the explanation.",
+    "ladder": [
+      "Mistake",
+      "Hint",
+      "Try again",
+      "Hint 2",
+      "Explanation"
+    ],
+    "chatTask": "AI said: “The Great Wall of China is visible from space with the naked eye.” Is that true?",
+    "chatStudent": "Yes, everyone knows that",
+    "chatTutorLabel": "AI Tutor · Hint 1",
+    "chatTutor": "Not so fast! “Everyone knows” doesn’t mean “checked”. What do astronauts themselves say?"
+  },
+  "audience": {
+    "eyebrow": "For adults",
+    "title": "For parents and schools",
+    "parentsTitle": "For parents",
+    "parentsPoints": [
+      "See the skills your child has learned, not just hours",
+      "Portfolio projects instead of points",
+      "A safe place to work with AI"
+    ],
+    "schoolsTitle": "For schools and learning centers",
+    "schoolsPoints": [
+      "Teacher dashboard: progress, mistakes, projects",
+      "Assign tasks to a class",
+      "A ready-made 12-module program"
+    ]
+  },
+  "cta": {
+    "title": "Ready to figure out the world of AI?",
+    "subtitle": "5 minutes — and you have your own learning path.",
+    "button": "Get started"
+  },
+  "footer": {
+    "tagline": "Learn → Adapt → Create → Improve",
+    "rights": "© 2026 AiGo. MVP prototype."
+  },
+  "onboarding": {
+    "step": "Step {current} of {total}",
+    "next": "Next",
+    "back": "Back",
+    "age": {
+      "title": "How old are you?",
+      "subtitle": "We’ll match the language, examples and tasks to your age.",
+      "explorer": "Explorer",
+      "explorerDesc": "Games, stories and simple AI experiments",
+      "creator": "Creator",
+      "creatorDesc": "Real tasks, projects and your first AI products"
+    },
+    "quiz": {
+      "title": "Who does it better?",
+      "question": "Question {current} of {total}",
+      "task": "Task",
+      "correct": "Correct! +10 XP",
+      "wrong": "Not quite",
+      "next": "Next question",
+      "finish": "Next",
+      "questions": [
+        {
+          "task": "Translate game instructions from English into another language",
+          "answer": "ai",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "fast and accurate enough"
+            },
+            {
+              "actor": "human",
+              "hint": "accurate, but slow"
+            },
+            {
+              "actor": "together",
+              "hint": "AI translates — you check"
+            }
+          ],
+          "explanation": "AI can handle a simple text on its own. But if a mistake is costly, it’s better to check together."
+        },
+        {
+          "task": "Come up with 30 names for a school startup and pick the one your classmates will like",
+          "answer": "together",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "fast, but doesn’t know your classmates"
+            },
+            {
+              "actor": "human",
+              "hint": "knows the audience, but slow"
+            },
+            {
+              "actor": "together",
+              "hint": "AI generates — you choose"
+            }
+          ],
+          "explanation": "AI gives you 30 options in seconds, and you know what your classmates will like."
+        },
+        {
+          "task": "Support a friend who is upset after losing a game",
+          "answer": "human",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "can suggest words"
+            },
+            {
+              "actor": "human",
+              "hint": "you’re there and you understand"
+            },
+            {
+              "actor": "together",
+              "hint": "AI suggests — you speak"
+            }
+          ],
+          "explanation": "Support works when it’s real. What matters here is you, not a perfect text."
+        },
+        {
+          "task": "Find mistakes in a 5,000-row table of grades",
+          "answer": "together",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "quickly spots odd values"
+            },
+            {
+              "actor": "human",
+              "hint": "checks by hand"
+            },
+            {
+              "actor": "together",
+              "hint": "AI finds — you check"
+            }
+          ],
+          "explanation": "AI quickly finds suspicious rows, but a person should decide which ones are real mistakes."
+        },
+        {
+          "task": "Decide which project to do for a school contest",
+          "answer": "human",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "suggests ideas"
+            },
+            {
+              "actor": "human",
+              "hint": "you know what interests you"
+            },
+            {
+              "actor": "together",
+              "hint": "AI suggests — you decide"
+            }
+          ],
+          "explanation": "AI can suggest ideas, but the decision and the responsibility are yours."
+        }
+      ]
+    },
+    "insight": {
+      "badge": "Key idea",
+      "title": "AI changes tasks. A person’s value is in what they do with it",
+      "skills": "Your skills",
+      "ai": "AI",
+      "result": "New possibilities",
+      "points": [
+        {
+          "title": "AI makes mistakes",
+          "desc": "That’s why checking its answers matters."
+        },
+        {
+          "title": "AI doesn’t know your goal",
+          "desc": "You set the task and decide what’s good."
+        },
+        {
+          "title": "Tools change every year",
+          "desc": "The key skill is learning new things fast."
+        }
+      ],
+      "cta": "I’m ready to learn"
+    },
+    "interests": {
+      "title": "What are you into?",
+      "subtitle": "Pick 3 or more — we’ll build tasks and projects around your interests.",
+      "items": [
+        "Games",
+        "Drawing",
+        "Video & blogging",
+        "Music",
+        "Coding",
+        "Business",
+        "Science",
+        "Sports",
+        "Fashion",
+        "Animals",
+        "Space",
+        "Photography"
+      ],
+      "more": "Pick {count} more",
+      "cta": "Build my path",
+      "example": "A task for you: “Use AI to come up with a project idea about {topic} and check whether it got any facts wrong”"
+    }
+  },
+  "app": {
+    "nav": {
+      "home": "Home",
+      "path": "My path",
+      "portfolio": "Portfolio",
+      "lesson": "Lesson"
+    },
+    "greeting": "Hi, {name}!",
+    "level": "Level {level} · {title}",
+    "xp": "{current} / {max} XP",
+    "toLevel": "to {title}",
+    "streak": "{days, plural, one {# day} other {# days}} in a row",
+    "module": "Module 1 · AI World",
+    "lessonTitle": "Lesson 3. Can you trust AI?",
+    "continue": "Continue",
+    "challenge": "Weekly challenge",
+    "challengeText": "Learn a new AI tool in 15 minutes and solve a task with it",
+    "portfolio": "Portfolio",
+    "portfolioCount": "{count, plural, one {project} other {projects}}",
+    "skills": "My skills",
+    "interests": "Your interests",
+    "skillNames": [
+      "Giving AI clear tasks",
+      "Critical thinking",
+      "Fact-checking"
+    ],
+    "reset": "Redo onboarding",
+    "path": {
+      "title": "My path",
+      "subtitle": "12 modules: from understanding AI to your own AI product.",
+      "current": "Now",
+      "locked": "Soon"
+    },
+    "portfolioPage": {
+      "title": "Portfolio",
+      "subtitle": "Your projects live here. The real reward is what you create.",
+      "tag": "Mini-project · Module 1",
+      "projectTitle": "My AI study buddy",
+      "problemLabel": "Problem",
+      "problem": "Preparing for a history test is hard — lots of dates and events.",
+      "solutionLabel": "Solution",
+      "solution": "Review flashcards that AI makes from my notes.",
+      "aiRole": "AI’s role",
+      "aiRoleText": "Wrote questions and flashcards from my notes.",
+      "humanRole": "My role",
+      "humanRoleText": "Checked facts in the textbook, fixed 3 AI mistakes, chose the format.",
+      "skills": [
+        "Giving tasks",
+        "Fact-checking"
+      ],
+      "next": "Your next project unlocks after Module 2"
+    },
+    "lesson": {
+      "header": "Lesson 3 · Task {n}/10",
+      "topic": "Checking AI answers",
+      "task": "Task",
+      "claim": "AI said: “The Great Wall of China is visible from space with the naked eye.” Is that true?",
+      "options": [
+        "Yes, everyone knows that",
+        "No, it’s a myth",
+        "Sounds right, no need to check"
+      ],
+      "choose": "Choose an answer:",
+      "tryAgain": "Try again:",
+      "hint1Label": "AI Tutor · Hint 1",
+      "hint1": "Not so fast! “Everyone knows” doesn’t mean “checked”. Try to remember what astronauts themselves say.",
+      "hint2Label": "AI Tutor · Hint 2",
+      "hint2": "The wall is very long but narrow — just a few meters wide. Could you see something as wide as a road from 400 km up?",
+      "explainLabel": "AI Tutor · Explanation",
+      "successLabel": "Great job! +{xp} XP",
+      "explanation": "It’s a popular myth. Astronauts, including Yang Liwei — China’s first astronaut, said they could not see the wall from orbit with the naked eye. AI repeated a common mistake — that’s why AI answers need checking.",
+      "moreHint": "Another hint",
+      "back": "Back to home",
+      "howTitle": "How AI Tutor helps",
+      "howNote": "The answer comes last. First, you think."
+    },
+    "demoName": "Alex"
+  }
+}

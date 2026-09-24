@@ -1,0 +1,553 @@
+{
+  "meta": {
+    "title": "AiGo — AI bilan birga o‘rgan, moslash va yarat",
+    "description": "10–16 yoshli o‘smirlar uchun platforma: AI dunyoni qanday o‘zgartirayotganini tushun, u bilan ishlashni o‘rgan va o‘z loyihalaringni yarat."
+  },
+  "nav": {
+    "how": "Qanday ishlaydi",
+    "program": "Dastur",
+    "tutor": "AI Tutor",
+    "parents": "Ota-onalarga",
+    "start": "Boshlash",
+    "dashboard": "Mening kabinetim"
+  },
+  "lang": {
+    "label": "Til",
+    "uz": "O‘zbekcha",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "hero": {
+    "badge": "10–16 yoshli o‘smirlar uchun",
+    "title": "Dunyo o‘zgarmoqda.",
+    "titleAccent": "AI bilan ishlashni o‘rgan.",
+    "subtitle": "AI allaqachon kasblarni va odamlarning o‘qish usulini o‘zgartirmoqda. AiGo’da nima bo‘layotganini tushunasan, AI’ga vazifa qo‘yishni, uning javoblarini tekshirishni va o‘z loyihalaringni yaratishni o‘rganasan.",
+    "cta": "Bepul boshlash",
+    "ctaSecondary": "Qanday ishlaydi",
+    "you": "SEN",
+    "ai": "AI",
+    "floatCheck": "AI xato qildi — sen payqading",
+    "floatXp": "+30 XP",
+    "floatXpLabel": "faktlarni tekshirgani uchun",
+    "floatTutor": "Tayyor javob emas, maslahat",
+    "trust1": "60% amaliyot",
+    "trust2": "12 ta modul",
+    "trust3": "Loyihalar portfoliosi"
+  },
+  "stats": {
+    "eyebrow": "Hozir nima bo‘lmoqda",
+    "title": "Ish maktabdan ko‘ra tezroq o‘zgarmoqda",
+    "jobsNew": "+170 mln",
+    "jobsNewLabel": "yangi ish o‘rni 2030-yilgacha paydo bo‘ladi",
+    "jobsGone": "−92 mln",
+    "jobsGoneLabel": "ish o‘rni yo‘qoladi yoki kuchli o‘zgaradi",
+    "skills": "39%",
+    "skillsLabel": "ishda kerak bo‘ladigan asosiy ko‘nikmalar 2030-yilgacha o‘zgaradi",
+    "source": "Manba: World Economic Forum, Future of Jobs Report 2025",
+    "note": "Kasblar kamdan-kam butunlay yo‘qoladi. Ko‘pincha ular ichidagi vazifalar o‘zgaradi: odatiy ishni AI oladi, insonga esa o‘ylash, tekshirish va yaratish qoladi."
+  },
+  "professions": {
+    "eyebrow": "Misollarda",
+    "title": "AI ishni qanday o‘zgartiradi",
+    "subtitle": "Qaysi vazifalarni AI allaqachon bajaradi, qaysilari insonda qoladi va qaysilarini birga hal qilgan yaxshiroq — ko‘rib chiq.",
+    "actors": {
+      "ai": "AI",
+      "human": "Inson",
+      "together": "Birga"
+    },
+    "takeawayLabel": "Xulosa",
+    "items": [
+      {
+        "name": "Tarjimon",
+        "tasks": [
+          {
+            "title": "Uzun matnning qoralama tarjimasi",
+            "actor": "ai"
+          },
+          {
+            "title": "Hazil va so‘z o‘yinlarini tarjima qilish",
+            "actor": "together"
+          },
+          {
+            "title": "Ma’no va ohangni tekshirish",
+            "actor": "human"
+          },
+          {
+            "title": "Odamlar bilan jonli muzokaralar",
+            "actor": "human"
+          },
+          {
+            "title": "Hujjatdagi atamalarni tekshirish",
+            "actor": "together"
+          }
+        ],
+        "takeaway": "Qoralama endi bir necha daqiqa oladi. AI yomon qiladigan ish qadrliroq bo‘ldi: odamlarni va kontekstni tushunish, natija uchun javob berish."
+      },
+      {
+        "name": "Dizayner",
+        "tasks": [
+          {
+            "title": "Bir daqiqada 20 xil fon",
+            "actor": "ai"
+          },
+          {
+            "title": "Foydalanuvchiga nima kerakligini tushunish",
+            "actor": "human"
+          },
+          {
+            "title": "G‘oyalardan maket yig‘ish",
+            "actor": "together"
+          },
+          {
+            "title": "Brendni ajratib turadigan uslubni tanlash",
+            "actor": "human"
+          },
+          {
+            "title": "Ijtimoiy tarmoqlar uchun o‘lchamlarni tayyorlash",
+            "actor": "ai"
+          }
+        ],
+        "takeaway": "AI variantlarni tez chizadi, lekin qaysi biri muammoni hal qilishini bilmaydi. Did va odamlarni tushunish dizaynerda qoladi."
+      },
+      {
+        "name": "Dasturchi",
+        "tasks": [
+          {
+            "title": "Tavsif bo‘yicha oddiy kod yozish",
+            "actor": "ai"
+          },
+          {
+            "title": "Murakkab xatoning sababini topish",
+            "actor": "together"
+          },
+          {
+            "title": "Tizim qanday tuzilishini hal qilish",
+            "actor": "human"
+          },
+          {
+            "title": "Kod xavfsizligini tekshirish",
+            "actor": "human"
+          },
+          {
+            "title": "Testlar va hujjatlar yozish",
+            "actor": "together"
+          }
+        ],
+        "takeaway": "Kodni AI yozadi, lekin u uchun inson javob beradi. Eng muhimi — AI yozgan kodni tushunish, tekshirish va sinab ko‘rish."
+      },
+      {
+        "name": "Bloger",
+        "tasks": [
+          {
+            "title": "30 ta video uchun g‘oyalar",
+            "actor": "ai"
+          },
+          {
+            "title": "O‘z hikoyang va shaxsiy tajribang",
+            "actor": "human"
+          },
+          {
+            "title": "Ssenariy va montaj",
+            "actor": "together"
+          },
+          {
+            "title": "5 tilda subtitrlar",
+            "actor": "ai"
+          },
+          {
+            "title": "Obunachilar bilan muloqot",
+            "actor": "human"
+          }
+        ],
+        "takeaway": "AI kontent tayyorlashni tezlashtiradi. Lekin tomoshabinlar muallifning shaxsiyati uchun keladi — uni AI almashtira olmaydi."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "Qanday o‘qitamiz",
+    "title": "Kamroq ma’ruza — ko‘proq harakat",
+    "subtitle": "Har bir dars qisqa va tezda amaliyotga o‘tadi. G‘oyalar keyinroq yangi murakkablik darajasida yana qaytadi.",
+    "ratioTheory": "nazariya",
+    "ratioPractice": "amaliyot",
+    "ratioProject": "loyihalar",
+    "steps": [
+      {
+        "title": "Maqsad",
+        "desc": "Darsdan keyin nimani qila olasan"
+      },
+      {
+        "title": "Hayotiy misol",
+        "desc": "Bu aslida qayerda uchraydi"
+      },
+      {
+        "title": "Qisqacha",
+        "desc": "Bitta g‘oya, uzun ma’ruzalarsiz"
+      },
+      {
+        "title": "Namoyish",
+        "desc": "Qanday ishlashini ko‘ramiz"
+      },
+      {
+        "title": "Amaliyot",
+        "desc": "10–12 ta topshiriq: Easy → Medium → Challenge"
+      },
+      {
+        "title": "Challenge",
+        "desc": "Maslahatsiz vazifa"
+      },
+      {
+        "title": "Mulohaza",
+        "desc": "Nima chiqdi va nimani yaxshilash mumkin"
+      }
+    ],
+    "loopTitle": "O‘qish sikli",
+    "loop": [
+      "O‘rgan",
+      "Sinab ko‘r",
+      "Xato qil",
+      "AI’dan so‘ra",
+      "Tekshir",
+      "Yaxshila",
+      "Yarat",
+      "O‘ylab ko‘r"
+    ]
+  },
+  "program": {
+    "eyebrow": "Dastur",
+    "title": "12 ta modul: AI’ni tushunishdan o‘z mahsulotingacha",
+    "subtitle": "Dastlabki uchta modul allaqachon ochiq. Qolganlari platforma rivojlangani sari ochiladi.",
+    "available": "Ochiq",
+    "soon": "Tez orada",
+    "modules": [
+      {
+        "name": "AI World",
+        "desc": "Atrofimizdagi AI, uning imkoniyatlari va cheklovlari"
+      },
+      {
+        "name": "Human Skills",
+        "desc": "Fikrlash, ijodkorlik, to‘g‘ri savol bera olish"
+      },
+      {
+        "name": "AI Interaction",
+        "desc": "Vazifa, kontekst, misollar va javobni yaxshilash"
+      },
+      {
+        "name": "Research & Verification",
+        "desc": "Qidiruv, faktlarni tekshirish va AI gallyutsinatsiyalari"
+      },
+      {
+        "name": "AI Creation",
+        "desc": "Matn, rasm, video va ovoz"
+      },
+      {
+        "name": "AI + Data",
+        "desc": "Hujjatlar, jadvallar va vizualizatsiya"
+      },
+      {
+        "name": "AI + Programming",
+        "desc": "Kodni AI yozadi — sen tushunasan va sinaysan"
+      },
+      {
+        "name": "AI Workflows",
+        "desc": "Bitta jarayonda bir nechta vosita"
+      },
+      {
+        "name": "AI Automation",
+        "desc": "Triggerlar, amallar, API va vebxuklar"
+      },
+      {
+        "name": "AI Agents",
+        "desc": "Maqsad → reja → vosita → harakat"
+      },
+      {
+        "name": "AI Product Building",
+        "desc": "Muammodan o‘z AI mahsulotingacha"
+      },
+      {
+        "name": "Career Adaptability",
+        "desc": "Kasblar qanday o‘zgaradi va keyin nimani o‘rganish kerak"
+      }
+    ]
+  },
+  "tutor": {
+    "eyebrow": "AI Tutor",
+    "title": "Ko‘chirishga emas, o‘ylashga yordam beradi",
+    "subtitle": "AI Tutor tayyor javobni darhol bermaydi. Xatodan keyin — maslahat, yangi urinish, ikkinchi maslahat va shundan keyingina tahlil.",
+    "ladder": [
+      "Xato",
+      "Maslahat",
+      "Urinish",
+      "Maslahat 2",
+      "Tahlil"
+    ],
+    "chatTask": "AI javob berdi: «Buyuk Xitoy devorini koinotdan oddiy ko‘z bilan ko‘rish mumkin». Bu rostmi?",
+    "chatStudent": "Ha, bu hammaga ma’lum fakt",
+    "chatTutorLabel": "AI Tutor · Maslahat 1",
+    "chatTutor": "Shoshilma! «Hammaga ma’lum» degani «tekshirilgan» degani emas. Kosmonavtlarning o‘zlari nima deydi?"
+  },
+  "audience": {
+    "eyebrow": "Kattalar uchun",
+    "title": "Ota-onalar va maktablarga",
+    "parentsTitle": "Ota-onalarga",
+    "parentsPoints": [
+      "Faqat soatlar emas, farzandingiz o‘zlashtirgan ko‘nikmalar ko‘rinadi",
+      "Ballar o‘rniga portfoliodagi loyihalar",
+      "AI bilan ishlash uchun xavfsiz muhit"
+    ],
+    "schoolsTitle": "Maktablar va o‘quv markazlariga",
+    "schoolsPoints": [
+      "O‘qituvchi kabineti: natijalar, xatolar, loyihalar",
+      "Sinfga topshiriq berish",
+      "12 modulli tayyor dastur"
+    ]
+  },
+  "cta": {
+    "title": "AI dunyosini tushunishga tayyormisan?",
+    "subtitle": "5 daqiqa — va sening shaxsiy o‘quv yo‘ling tayyor.",
+    "button": "Boshlash"
+  },
+  "footer": {
+    "tagline": "Learn → Adapt → Create → Improve",
+    "rights": "© 2026 AiGo. MVP prototipi."
+  },
+  "onboarding": {
+    "step": "Qadam {current}/{total}",
+    "next": "Keyingisi",
+    "back": "Orqaga",
+    "age": {
+      "title": "Yoshing nechada?",
+      "subtitle": "Til, misollar va topshiriqlarni yoshingga moslab tanlaymiz.",
+      "explorer": "Tadqiqotchi",
+      "explorerDesc": "O‘yinlar, hikoyalar va AI bilan oddiy tajribalar",
+      "creator": "Yaratuvchi",
+      "creatorDesc": "Haqiqiy vazifalar, loyihalar va ilk AI mahsulotlar"
+    },
+    "quiz": {
+      "title": "Kim yaxshiroq uddalaydi?",
+      "question": "Savol {current}/{total}",
+      "task": "Vazifa",
+      "correct": "To‘g‘ri! +10 XP",
+      "wrong": "Unchalik emas",
+      "next": "Keyingi savol",
+      "finish": "Keyingisi",
+      "questions": [
+        {
+          "task": "O‘yin qo‘llanmasini ingliz tilidan o‘zbek tiliga tarjima qilish",
+          "answer": "ai",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "tez va yetarlicha aniq"
+            },
+            {
+              "actor": "human",
+              "hint": "aniq, lekin sekin"
+            },
+            {
+              "actor": "together",
+              "hint": "AI tarjima qiladi — sen tekshirasan"
+            }
+          ],
+          "explanation": "Oddiy matnni AI o‘zi uddalaydi. Lekin xato qimmatga tushsa — birga tekshirgan yaxshi."
+        },
+        {
+          "task": "Maktab startapi uchun 30 ta nom o‘ylab topish va sinfdoshlarga yoqadiganini tanlash",
+          "answer": "together",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "tez, lekin sinfdoshlaringni tanimaydi"
+            },
+            {
+              "actor": "human",
+              "hint": "auditoriyani biladi, lekin sekin"
+            },
+            {
+              "actor": "together",
+              "hint": "AI yaratadi — sen tanlaysan"
+            }
+          ],
+          "explanation": "AI bir necha soniyada 30 ta variant beradi, sinfdoshlarga nima yoqishini esa sen bilasan."
+        },
+        {
+          "task": "O‘yinda yutqazib, xafa bo‘lgan do‘stni qo‘llab-quvvatlash",
+          "answer": "human",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "so‘zlarni taklif qiladi"
+            },
+            {
+              "actor": "human",
+              "hint": "sen yonidasan va uni tushunasan"
+            },
+            {
+              "actor": "together",
+              "hint": "AI maslahat beradi — sen gapirasan"
+            }
+          ],
+          "explanation": "Qo‘llab-quvvatlash samimiy bo‘lsa ishlaydi. Bu yerda mukammal matn emas, sen muhimsan."
+        },
+        {
+          "task": "5 000 qatorli baholar jadvalidan xatolarni topish",
+          "answer": "together",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "g‘alati qiymatlarni tez topadi"
+            },
+            {
+              "actor": "human",
+              "hint": "qo‘lda tekshiradi"
+            },
+            {
+              "actor": "together",
+              "hint": "AI topadi — sen tekshirasan"
+            }
+          ],
+          "explanation": "AI shubhali qatorlarni tez topadi, lekin qaysi biri haqiqiy xato ekanini inson hal qilishi kerak."
+        },
+        {
+          "task": "Maktab tanlovi uchun qaysi loyihani qilishni hal qilish",
+          "answer": "human",
+          "options": [
+            {
+              "actor": "ai",
+              "hint": "g‘oyalar taklif qiladi"
+            },
+            {
+              "actor": "human",
+              "hint": "senga nima qiziqligini o‘zing bilasan"
+            },
+            {
+              "actor": "together",
+              "hint": "AI taklif qiladi — sen hal qilasan"
+            }
+          ],
+          "explanation": "AI g‘oyalar taklif qilishi mumkin, lekin qaror va mas’uliyat — seniki."
+        }
+      ]
+    },
+    "insight": {
+      "badge": "Eng muhimi",
+      "title": "AI vazifalarni o‘zgartiradi. Insonning qadri — u AI bilan nima qilishida",
+      "skills": "Sening ko‘nikmalaring",
+      "ai": "AI",
+      "result": "Yangi imkoniyatlar",
+      "points": [
+        {
+          "title": "AI xato qiladi",
+          "desc": "Shuning uchun uning javoblarini tekshira olish muhim."
+        },
+        {
+          "title": "AI sening maqsadingni bilmaydi",
+          "desc": "Vazifani qo‘yish va nima yaxshi ekanini hal qilish — sening ishing."
+        },
+        {
+          "title": "Vositalar har yili o‘zgaradi",
+          "desc": "Asosiy ko‘nikma — yangi narsani tez o‘zlashtirish."
+        }
+      ],
+      "cta": "O‘rganishga tayyorman"
+    },
+    "interests": {
+      "title": "Senga nima qiziq?",
+      "subtitle": "3 ta yoki undan ko‘pini tanla — topshiriq va loyihalarni qiziqishlaring atrofida yig‘amiz.",
+      "items": [
+        "O‘yinlar",
+        "Rasm chizish",
+        "Video va blog",
+        "Musiqa",
+        "Dasturlash",
+        "Biznes",
+        "Fan",
+        "Sport",
+        "Moda",
+        "Hayvonlar",
+        "Koinot",
+        "Foto"
+      ],
+      "more": "Yana {count} ta tanla",
+      "cta": "Yo‘limni yig‘ish",
+      "example": "Sen uchun topshiriq namunasi: «AI bilan “{topic}” mavzusida loyiha g‘oyasini o‘ylab top va u faktlarda xato qilmaganini tekshir»"
+    }
+  },
+  "app": {
+    "nav": {
+      "home": "Asosiy",
+      "path": "Mening yo‘lim",
+      "portfolio": "Portfolio",
+      "lesson": "Dars"
+    },
+    "greeting": "Salom, {name}!",
+    "level": "{level}-daraja · {title}",
+    "xp": "{current} / {max} XP",
+    "toLevel": "{title} darajasigacha",
+    "streak": "{days} kun ketma-ket",
+    "module": "1-modul · AI World",
+    "lessonTitle": "3-dars. AI’ga ishonsa bo‘ladimi?",
+    "continue": "Davom etish",
+    "challenge": "Hafta challenge’i",
+    "challengeText": "15 daqiqada yangi AI vositasini o‘zlashtir va u bilan vazifani hal qil",
+    "portfolio": "Portfolio",
+    "portfolioCount": "loyiha",
+    "skills": "Mening ko‘nikmalarim",
+    "interests": "Qiziqishlaring",
+    "skillNames": [
+      "AI’ga vazifa qo‘yish",
+      "Tanqidiy fikrlash",
+      "Faktlarni tekshirish"
+    ],
+    "reset": "Onboardingni qaytadan o‘tish",
+    "path": {
+      "title": "Mening yo‘lim",
+      "subtitle": "12 ta modul: AI’ni tushunishdan o‘z AI mahsulotingacha.",
+      "current": "Hozir",
+      "locked": "Tez orada"
+    },
+    "portfolioPage": {
+      "title": "Portfolio",
+      "subtitle": "Bu yerda loyihalaring yig‘iladi. Eng katta mukofot — sen yaratgan narsa.",
+      "tag": "Mini-loyiha · 1-modul",
+      "projectTitle": "O‘qish uchun AI yordamchim",
+      "problemLabel": "Muammo",
+      "problem": "Tarix nazoratiga tayyorlanish qiyin — sanalar va voqealar juda ko‘p.",
+      "solutionLabel": "Yechim",
+      "solution": "AI konspekt asosida tuzadigan takrorlash kartochkalari.",
+      "aiRole": "AI roli",
+      "aiRoleText": "Konspektim asosida savollar va kartochkalar tuzdi.",
+      "humanRole": "Mening rolim",
+      "humanRoleText": "Faktlarni darslikdan tekshirdim, AI’ning 3 ta xatosini tuzatdim, formatni tanladim.",
+      "skills": [
+        "Vazifa qo‘yish",
+        "Faktlarni tekshirish"
+      ],
+      "next": "Keyingi loyiha 2-moduldan keyin ochiladi"
+    },
+    "lesson": {
+      "header": "3-dars · {n}/10-topshiriq",
+      "topic": "AI javoblarini tekshirish",
+      "task": "Topshiriq",
+      "claim": "AI javob berdi: «Buyuk Xitoy devorini koinotdan oddiy ko‘z bilan ko‘rish mumkin». Bu rostmi?",
+      "options": [
+        "Ha, bu hammaga ma’lum fakt",
+        "Yo‘q, bu afsona",
+        "Rostga o‘xshaydi, tekshirish shart emas"
+      ],
+      "choose": "Javobni tanla:",
+      "tryAgain": "Yana urinib ko‘r:",
+      "hint1Label": "AI Tutor · Maslahat 1",
+      "hint1": "Shoshilma! «Hammaga ma’lum» degani «tekshirilgan» degani emas. Kosmonavtlarning o‘zlari nima deganini eslab ko‘r.",
+      "hint2Label": "AI Tutor · Maslahat 2",
+      "hint2": "Devor juda uzun, lekin tor — atigi bir necha metr. 400 km balandlikdan yo‘l kengligidagi narsani ko‘rish mumkinmi?",
+      "explainLabel": "AI Tutor · Tahlil",
+      "successLabel": "Zo‘r! +{xp} XP",
+      "explanation": "Bu mashhur afsona. Kosmonavtlar, jumladan Xitoyning birinchi kosmonavti Yan Livey ham devorni orbitadan oddiy ko‘z bilan ko‘rmaganini aytgan. AI keng tarqalgan xatoni takrorladi — shuning uchun AI javoblarini tekshirish kerak.",
+      "moreHint": "Yana maslahat",
+      "back": "Asosiyga",
+      "howTitle": "AI Tutor qanday yordam beradi",
+      "howNote": "Tayyor javob — faqat oxirida. Avval o‘zing o‘ylaysan."
+    },
+    "demoName": "Aziz"
+  }
+}
