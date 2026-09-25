@@ -11,6 +11,8 @@ type Progress = {
   xp: number;
   lessonProgress: number;
   onboarded: boolean;
+  /** Onboarding thinking check: one entry per question, true if answered correctly. */
+  assessment: boolean[] | null;
 };
 
 type ProgressApi = Progress & {
@@ -19,12 +21,13 @@ type ProgressApi = Progress & {
   addXp: (n: number) => void;
   completeLessonTask: () => void;
   finishOnboarding: () => void;
+  saveAssessment: (answers: boolean[]) => void;
   reset: () => void;
 };
 
 const STORAGE_KEY = 'aigo-progress-v1';
 
-const initial: Progress = { age: null, interests: [], xp: 290, lessonProgress: 3, onboarded: false };
+const initial: Progress = { age: null, interests: [], xp: 290, lessonProgress: 3, onboarded: false, assessment: null };
 
 // Progress lives in localStorage; useSyncExternalStore keeps SSR (initial) and the client in sync.
 const listeners = new Set<() => void>();
@@ -72,6 +75,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       addXp: (n) => update((s) => ({ xp: s.xp + n })),
       completeLessonTask: () => update((s) => ({ lessonProgress: Math.min(10, s.lessonProgress + 1) })),
       finishOnboarding: () => update(() => ({ onboarded: true })),
+      saveAssessment: (answers) => update(() => ({ assessment: answers })),
       reset: () => write(initial),
     };
   }, [state]);
@@ -96,4 +100,11 @@ export function levelInfo(xp: number) {
     next: LEVEL_TITLES[Math.min(level, LEVEL_TITLES.length - 1)],
     inLevel: xp % XP_PER_LEVEL,
   };
+}
+
+export type AssessmentLevel = 'start' | 'middle' | 'advanced';
+
+export function assessmentLevel(score: number, total: number): AssessmentLevel {
+  if (score === total) return 'advanced';
+  return score >= Math.ceil(total / 2) ? 'middle' : 'start';
 }

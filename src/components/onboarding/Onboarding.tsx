@@ -1,7 +1,7 @@
 'use client';
 
 import clsx from 'clsx';
-import { ArrowLeft, ArrowRight, Check, Rocket, Telescope } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Brain, Check, Rocket, Telescope, TrendingUp, Trophy } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { ReactNode, useState } from 'react';
 import { actorTone, Actor } from '../landing/ProfessionExplorer';
@@ -10,9 +10,9 @@ import { LocaleSwitcher } from '../LocaleSwitcher';
 import { Logo } from '../Logo';
 import { buttonClass, Chip } from '../ui';
 import { useRouter } from '@/i18n/navigation';
-import { AgeGroup, useProgress } from '@/lib/progress';
+import { AgeGroup, assessmentLevel, useProgress } from '@/lib/progress';
 
-const STEPS = ['age', 'reality', 'quiz', 'insight', 'interests'] as const;
+const STEPS = ['age', 'reality', 'quiz', 'check', 'insight', 'interests'] as const;
 const MIN_INTERESTS = 3;
 
 export function Onboarding() {
@@ -59,6 +59,7 @@ export function Onboarding() {
           {STEPS[step] === 'age' && <AgeStep onNext={next} />}
           {STEPS[step] === 'reality' && <RealityStep onNext={next} />}
           {STEPS[step] === 'quiz' && <QuizStep onNext={next} />}
+          {STEPS[step] === 'check' && <CheckStep onNext={next} />}
           {STEPS[step] === 'insight' && <InsightStep onNext={next} />}
           {STEPS[step] === 'interests' && <InterestsStep />}
         </div>
@@ -237,6 +238,167 @@ function QuizStep({ onNext }: { onNext: () => void }) {
         </button>
       </Footer>
     </>
+  );
+}
+
+type Skill = 'critical' | 'logic' | 'prompting' | 'problem';
+type CheckQuestion = { skill: Skill; text: string; options: string[]; answer: number; explanation: string };
+
+const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
+
+function CheckStep({ onNext }: { onNext: () => void }) {
+  const t = useTranslations('onboarding.check');
+  const { addXp, saveAssessment } = useProgress();
+  const questions = t.raw('questions') as CheckQuestion[];
+  const [index, setIndex] = useState(0);
+  const [picked, setPicked] = useState<number | null>(null);
+  const [answers, setAnswers] = useState<boolean[]>([]);
+  const [showResult, setShowResult] = useState(false);
+  const q = questions[index];
+  const correct = picked === q.answer;
+  const last = index === questions.length - 1;
+
+  const pick = (i: number) => {
+    if (picked !== null) return;
+    setPicked(i);
+    setAnswers((a) => [...a, i === q.answer]);
+    if (i === q.answer) addXp(10);
+  };
+
+  const advance = () => {
+    if (!last) {
+      setIndex(index + 1);
+      setPicked(null);
+      return;
+    }
+    saveAssessment(answers);
+    setShowResult(true);
+  };
+
+  if (showResult) return <CheckResult questions={questions} answers={answers} onNext={onNext} />;
+
+  return (
+    <>
+      <div className="flex items-center justify-between gap-4">
+        <Chip tone="sky">
+          <Brain className="size-3.5" />
+          {t('badge')}
+        </Chip>
+        <Chip>{t('question', { current: index + 1, total: questions.length })}</Chip>
+      </div>
+      <div className="mt-4">
+        <StepTitle title={t('title')} subtitle={index === 0 ? t('subtitle') : undefined} />
+      </div>
+
+      <div key={index} className="animate-rise">
+        <div className="mt-8 rounded-3xl bg-surface p-6 shadow-card ring-1 ring-line sm:p-7">
+          <p className="text-xs font-bold uppercase tracking-widest text-brand">{t(`skills.${q.skill}`)}</p>
+          <p className="mt-3 font-display text-lg font-medium leading-relaxed sm:text-xl">{q.text}</p>
+        </div>
+
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {q.options.map((o, i) => {
+            const isAnswer = picked !== null && i === q.answer;
+            const wrong = picked === i && !correct;
+            return (
+              <button
+                key={o}
+                onClick={() => pick(i)}
+                disabled={picked !== null && !isAnswer && !wrong}
+                className={clsx(
+                  'flex items-center gap-3 rounded-2xl bg-surface p-4 text-left font-medium transition disabled:opacity-50',
+                  isAnswer && 'bg-success-soft ring-2 ring-success',
+                  wrong && 'bg-coral-soft ring-2 ring-coral',
+                  picked === null && 'ring-1 ring-line hover:-translate-y-0.5 hover:ring-brand',
+                )}
+              >
+                <span
+                  className={clsx(
+                    'grid size-8 shrink-0 place-items-center rounded-xl font-display text-sm font-bold',
+                    isAnswer ? 'bg-success text-white' : wrong ? 'bg-coral text-white' : 'bg-canvas text-muted',
+                  )}
+                >
+                  {OPTION_LETTERS[i]}
+                </span>
+                {o}
+              </button>
+            );
+          })}
+        </div>
+
+        {picked !== null ? (
+          <div className={clsx('mt-4 animate-rise rounded-3xl bg-surface p-5 ring-2', correct ? 'ring-success' : 'ring-coral')}>
+            <p className={clsx('font-display font-semibold', correct ? 'text-success' : 'text-coral-ink')}>{correct ? t('correct') : t('wrong')}</p>
+            <p className="mt-1 leading-relaxed">{q.explanation}</p>
+          </div>
+        ) : null}
+      </div>
+
+      <Footer>
+        <button onClick={advance} disabled={picked === null} className={buttonClass('primary', 'lg')}>
+          {last ? t('finish') : t('next')}
+          <ArrowRight className="size-5" />
+        </button>
+      </Footer>
+    </>
+  );
+}
+
+function CheckResult({ questions, answers, onNext }: { questions: CheckQuestion[]; answers: boolean[]; onNext: () => void }) {
+  const t = useTranslations('onboarding.check');
+  const score = answers.filter(Boolean).length;
+  const level = assessmentLevel(score, questions.length);
+  const skills = [...new Set(questions.map((q) => q.skill))];
+  const strong = skills.filter((s) => questions.every((q, i) => q.skill !== s || answers[i]));
+  const growth = skills.filter((s) => !strong.includes(s));
+
+  return (
+    <div className="animate-rise">
+      <div className="relative overflow-hidden rounded-[32px] bg-brand p-7 text-white sm:p-9">
+        <div className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-lime/30 blur-2xl" />
+        <Trophy className="relative size-10 text-lime" />
+        <h1 className="relative mt-5 font-display text-3xl font-bold sm:text-4xl">{t('resultTitle', { score, total: questions.length })}</h1>
+        <div className="relative mt-5 flex gap-1.5">
+          {answers.map((ok, i) => (
+            <span key={i} className={clsx('h-2 flex-1 rounded-full', ok ? 'bg-lime' : 'bg-white/25')} />
+          ))}
+        </div>
+        <p className="relative mt-6 text-sm font-semibold uppercase tracking-widest text-white/70">{t('levelLabel')}</p>
+        <p className="relative mt-1 font-display text-2xl font-bold">{t(`levels.${level}`)}</p>
+        <p className="relative mt-2 max-w-lg text-white/85">{t(`levelText.${level}`)}</p>
+      </div>
+
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        <SkillList icon={<Check className="size-4" />} title={t('strengths')} items={strong.map((s) => t(`skills.${s}`))} tone="success" />
+        <SkillList icon={<TrendingUp className="size-4" />} title={t('growth')} items={growth.map((s) => t(`skills.${s}`))} tone="sky" />
+      </div>
+
+      <Footer>
+        <button onClick={onNext} className={buttonClass('primary', 'lg')}>
+          {t('continue')}
+          <ArrowRight className="size-5" />
+        </button>
+      </Footer>
+    </div>
+  );
+}
+
+function SkillList({ icon, title, items, tone }: { icon: ReactNode; title: string; items: string[]; tone: 'success' | 'sky' }) {
+  if (!items.length) return null;
+  return (
+    <div className="rounded-3xl bg-surface p-5 ring-1 ring-line">
+      <p className={clsx('flex items-center gap-2 text-sm font-bold', tone === 'success' ? 'text-success' : 'text-sky-ink')}>
+        {icon}
+        {title}
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {items.map((s) => (
+          <Chip key={s} tone={tone}>
+            {s}
+          </Chip>
+        ))}
+      </div>
+    </div>
   );
 }
 

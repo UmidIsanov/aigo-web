@@ -428,6 +428,99 @@
         }
       ]
     },
+    "check": {
+      "badge": "Fikrlashni tekshirish",
+      "title": "Sen qanday fikrlaysan?",
+      "subtitle": "5 ta qisqa topshiriq. Bu imtihon emas — shunday qilib qaysi darajadan boshlash senga qiziqroq ekanini bilamiz.",
+      "question": "Topshiriq {current}/{total}",
+      "correct": "To‘g‘ri! +10 XP",
+      "wrong": "Unchalik emas",
+      "next": "Keyingi topshiriq",
+      "finish": "Natijani ko‘rish",
+      "resultTitle": "Natijang: {total} tadan {score} ta",
+      "levelLabel": "Boshlang‘ich daraja",
+      "levels": {
+        "start": "Tadqiqotchi",
+        "middle": "Amaliyotchi",
+        "advanced": "Masalalar ustasi"
+      },
+      "levelText": {
+        "start": "Zo‘r boshlanish! Asoslardan boshlaymiz va topshiriqlarni asta-sekin murakkablashtiramiz.",
+        "middle": "Yaxshi natija! Ba’zi asoslarni allaqachon bilasan — qiyinroq topshiriqlar qo‘shamiz.",
+        "advanced": "Kuchli natija! Darhol ko‘proq Challenge darajasidagi topshiriqlar beramiz."
+      },
+      "strengths": "Kuchli tomonlaring",
+      "growth": "Nimani rivojlantiramiz",
+      "continue": "Keyingisi",
+      "skills": {
+        "critical": "Tanqidiy fikrlash",
+        "logic": "Mantiq",
+        "prompting": "AI’ga vazifa qo‘yish",
+        "problem": "Masala yechish"
+      },
+      "questions": [
+        {
+          "skill": "critical",
+          "text": "AI yozdi: «Dunyodagi eng baland tog‘ — Chimyon». Nima qilasan?",
+          "options": [
+            "Ishonaman — AI aqlli-ku",
+            "Ikkita ishonchli manbadan tekshiraman",
+            "AI’dan xuddi shu savolni yana so‘rayman",
+            "Javobni daftarimga ko‘chiraman"
+          ],
+          "answer": 1,
+          "explanation": "Eng baland tog‘ — Everest. AI javoblarini ishonchli manbalar bilan solishtirish kerak, o‘sha AI’dan qayta so‘rash hech narsani isbotlamaydi."
+        },
+        {
+          "skill": "logic",
+          "text": "Qatorni davom ettir: 2, 4, 8, 16, …",
+          "options": [
+            "18",
+            "24",
+            "32",
+            "20"
+          ],
+          "answer": 2,
+          "explanation": "Har bir son oldingisidan 2 marta katta: 16 × 2 = 32."
+        },
+        {
+          "skill": "prompting",
+          "text": "AI’ga qaysi so‘rov eng foydali natija beradi?",
+          "options": [
+            "Insho yoz",
+            "6-sinf uchun yoz haqida 150 so‘zli insho yoz, sodda tilda, hayotiy misol bilan",
+            "Insho!!! Tez!!!",
+            "Qiziqarli bir narsa qil"
+          ],
+          "answer": 1,
+          "explanation": "Yaxshi so‘rovda mavzu, hajm, auditoriya va uslub bo‘ladi. Vazifa qanchalik aniq bo‘lsa, javob shunchalik yaxshi."
+        },
+        {
+          "skill": "logic",
+          "text": "To‘garakdagi barcha robotlar sanashni biladi. Robot Bip to‘garakka qatnaydi. Nima aniq to‘g‘ri?",
+          "options": [
+            "Bip sanashni biladi",
+            "Bip rasm chizishni biladi",
+            "Sanashni biladiganlarning hammasi robot",
+            "Hech narsa deb bo‘lmaydi"
+          ],
+          "answer": 0,
+          "explanation": "To‘garakdagi barcha robotlar sanay olsa va Bip shu to‘garakdagi robot bo‘lsa, demak Bip sanashni biladi. Boshqasi shartdan kelib chiqmaydi."
+        },
+        {
+          "skill": "problem",
+          "text": "Maktab klubi uchun sayt yaratmoqchisan. Nimadan boshlagan ma’qul?",
+          "options": [
+            "Darhol kod yozishdan",
+            "Chiroyli rang tanlashdan",
+            "Sayt kimga va nima uchun kerakligini tushunishdan",
+            "Hammasini AI’ga topshirishdan"
+          ],
+          "answer": 2,
+          "explanation": "Avval vazifani tushunish kerak: sayt kim uchun va unda nima bo‘lishi kerak. Kod, dizayn va AI — keyingi qadamlar."
+        }
+      ]
+    },
     "insight": {
       "badge": "Eng muhimi",
       "title": "AI vazifalarni o‘zgartiradi. Insonning qadri — u AI bilan nima qilishida",
@@ -493,11 +586,6 @@
     "portfolioCount": "loyiha",
     "skills": "Mening ko‘nikmalarim",
     "interests": "Qiziqishlaring",
-    "skillNames": [
-      "AI’ga vazifa qo‘yish",
-      "Tanqidiy fikrlash",
-      "Faktlarni tekshirish"
-    ],
     "reset": "Onboardingni qaytadan o‘tish",
     "path": {
       "title": "Mening yo‘lim",
@@ -548,6 +636,7 @@
       "howTitle": "AI Tutor qanday yordam beradi",
       "howNote": "Tayyor javob — faqat oxirida. Avval o‘zing o‘ylaysan."
     },
-    "demoName": "Aziz"
+    "demoName": "Aziz",
+    "startLevel": "Boshlang‘ich daraja: {level}"
   }
 }

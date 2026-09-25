@@ -428,6 +428,99 @@
         }
       ]
     },
+    "check": {
+      "badge": "Thinking check",
+      "title": "How do you think?",
+      "subtitle": "5 short tasks. It’s not a test — it helps us find the right level for you to start.",
+      "question": "Task {current} of {total}",
+      "correct": "Correct! +10 XP",
+      "wrong": "Not quite",
+      "next": "Next task",
+      "finish": "See my result",
+      "resultTitle": "Your result: {score} of {total}",
+      "levelLabel": "Starting level",
+      "levels": {
+        "start": "Explorer",
+        "middle": "Practitioner",
+        "advanced": "Problem Master"
+      },
+      "levelText": {
+        "start": "Great start! We’ll begin with the basics and make tasks harder step by step.",
+        "middle": "Good result! You already know some basics — we’ll add harder tasks.",
+        "advanced": "Strong result! We’ll give you more Challenge-level tasks right away."
+      },
+      "strengths": "Your strengths",
+      "growth": "What we’ll level up",
+      "continue": "Next",
+      "skills": {
+        "critical": "Critical thinking",
+        "logic": "Logic",
+        "prompting": "Giving AI clear tasks",
+        "problem": "Problem solving"
+      },
+      "questions": [
+        {
+          "skill": "critical",
+          "text": "AI wrote: “The highest mountain in the world is Mont Blanc.” What will you do?",
+          "options": [
+            "Believe it — AI is smart",
+            "Check two reliable sources",
+            "Ask AI the same question again",
+            "Copy the answer into my notebook"
+          ],
+          "answer": 1,
+          "explanation": "The highest mountain is Everest. AI answers need checking against reliable sources — asking the same AI again proves nothing."
+        },
+        {
+          "skill": "logic",
+          "text": "Continue the sequence: 2, 4, 8, 16, …",
+          "options": [
+            "18",
+            "24",
+            "32",
+            "20"
+          ],
+          "answer": 2,
+          "explanation": "Each number is twice the previous one: 16 × 2 = 32."
+        },
+        {
+          "skill": "prompting",
+          "text": "Which request to AI will give the most useful result?",
+          "options": [
+            "Write an essay",
+            "Write a 150-word essay about summer for 6th graders, in simple language, with a real-life example",
+            "Essay!!! Fast!!!",
+            "Do something interesting"
+          ],
+          "answer": 1,
+          "explanation": "A good request includes the topic, length, audience and style. The clearer the task, the better the answer."
+        },
+        {
+          "skill": "logic",
+          "text": "All robots in the club can count. Robot Beep goes to the club. What is definitely true?",
+          "options": [
+            "Beep can count",
+            "Beep can draw",
+            "Everyone who can count is a robot",
+            "We can’t say anything"
+          ],
+          "answer": 0,
+          "explanation": "If every robot in the club can count and Beep is a robot from the club, then Beep can count. Nothing else follows."
+        },
+        {
+          "skill": "problem",
+          "text": "You want to make a website for your school club. Where should you start?",
+          "options": [
+            "Start writing code",
+            "Pick a nice color",
+            "Figure out who the site is for and why",
+            "Ask AI to do everything"
+          ],
+          "answer": 2,
+          "explanation": "First understand the problem: who the site is for and what it needs. Code, design and AI come next."
+        }
+      ]
+    },
     "insight": {
       "badge": "Key idea",
       "title": "AI changes tasks. A person’s value is in what they do with it",
@@ -493,11 +586,6 @@
     "portfolioCount": "{count, plural, one {project} other {projects}}",
     "skills": "My skills",
     "interests": "Your interests",
-    "skillNames": [
-      "Giving AI clear tasks",
-      "Critical thinking",
-      "Fact-checking"
-    ],
     "reset": "Redo onboarding",
     "path": {
       "title": "My path",
@@ -548,6 +636,7 @@
       "howTitle": "How AI Tutor helps",
       "howNote": "The answer comes last. First, you think."
     },
-    "demoName": "Alex"
+    "demoName": "Alex",
+    "startLevel": "Starting level: {level}"
   }
 }

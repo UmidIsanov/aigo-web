@@ -3,20 +3,31 @@
 import { ArrowRight, Flame, Sparkles, Trophy } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { levelInfo, useProgress, XP_PER_LEVEL } from '@/lib/progress';
+import { assessmentLevel, levelInfo, useProgress, XP_PER_LEVEL } from '@/lib/progress';
 import { buttonClass, Chip, ProgressBar } from '../ui';
 
 export function Dashboard() {
   const t = useTranslations('app');
   const tInterests = useTranslations('onboarding.interests');
-  const { xp, lessonProgress, interests, reset } = useProgress();
+  const { xp, lessonProgress, interests, assessment, reset } = useProgress();
   const lvl = levelInfo(xp);
   const interestNames = (tInterests.raw('items') as string[]).filter((_, i) => interests.includes(i));
-  const skillNames = t.raw('skillNames') as string[];
+  const tCheck = useTranslations('onboarding.check');
+  const checkQuestions = tCheck.raw('questions') as { skill: string }[];
+  const score = assessment?.filter(Boolean).length ?? 0;
+  const level = assessment ? assessmentLevel(score, assessment.length) : null;
+
+  // Starting skill values come from the onboarding thinking check; lessons add fact-checking practice.
+  const skillValue = (skill: string, bonus = 0) => {
+    const idx = checkQuestions.flatMap((q, i) => (q.skill === skill ? [i] : []));
+    const right = idx.filter((i) => assessment?.[i]).length;
+    return Math.min(100, 20 + Math.round((right / Math.max(1, idx.length)) * 50) + bonus);
+  };
   const skills = [
-    { name: skillNames[0], value: 55, bar: 'bg-brand' },
-    { name: skillNames[1], value: 40, bar: 'bg-coral' },
-    { name: skillNames[2], value: Math.min(100, 25 + (lessonProgress - 3) * 5), bar: 'bg-sky' },
+    { name: tCheck('skills.prompting'), value: skillValue('prompting'), bar: 'bg-brand' },
+    { name: tCheck('skills.critical'), value: skillValue('critical', (lessonProgress - 3) * 5), bar: 'bg-coral' },
+    { name: tCheck('skills.logic'), value: skillValue('logic'), bar: 'bg-sky' },
+    { name: tCheck('skills.problem'), value: skillValue('problem'), bar: 'bg-lime' },
   ];
 
   return (
@@ -27,6 +38,7 @@ export function Dashboard() {
           <h1 className="font-display text-2xl font-bold sm:text-3xl">{t('greeting', { name: t('demoName') })}</h1>
           <p className="text-muted">{t('level', { level: lvl.level, title: lvl.title })}</p>
         </div>
+        {level ? <Chip tone="sky">{t('startLevel', { level: tCheck(`levels.${level}`) })}</Chip> : null}
         <Chip tone="coral">
           <Flame className="size-4" />
           {t('streak', { days: 5 })}
