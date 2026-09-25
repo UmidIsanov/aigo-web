@@ -9,25 +9,41 @@ type Progress = {
   /** Indices into onboarding.interests.items, so the choice survives a language switch. */
   interests: number[];
   xp: number;
-  lessonProgress: number;
   onboarded: boolean;
   /** Onboarding thinking check: one entry per question, true if answered correctly. */
   assessment: boolean[] | null;
+  /** Question ids that already gave XP — each question pays out only once. */
+  rewarded: string[];
+  /** Course task ids the student has finished (solved or saw the explanation). */
+  completed: string[];
+  /** Course task the student is on; null means "first unfinished task". */
+  cursor: string | null;
 };
 
 type ProgressApi = Progress & {
   setAge: (a: AgeGroup) => void;
   toggleInterest: (i: number) => void;
-  addXp: (n: number) => void;
-  completeLessonTask: () => void;
+  /** Adds XP for a question once; returns false if this question was already rewarded. */
+  award: (questionId: string, xp: number) => boolean;
+  completeTask: (taskId: string) => void;
+  setCursor: (taskId: string | null) => void;
   finishOnboarding: () => void;
   saveAssessment: (answers: boolean[]) => void;
   reset: () => void;
 };
 
-const STORAGE_KEY = 'aigo-progress-v1';
+const STORAGE_KEY = 'aigo-progress-v2';
 
-const initial: Progress = { age: null, interests: [], xp: 290, lessonProgress: 3, onboarded: false, assessment: null };
+const initial: Progress = {
+  age: null,
+  interests: [],
+  xp: 0,
+  onboarded: false,
+  assessment: null,
+  rewarded: [],
+  completed: [],
+  cursor: null,
+};
 
 // Progress lives in localStorage; useSyncExternalStore keeps SSR (initial) and the client in sync.
 const listeners = new Set<() => void>();
@@ -72,8 +88,13 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       setAge: (age) => update(() => ({ age })),
       toggleInterest: (i) =>
         update((s) => ({ interests: s.interests.includes(i) ? s.interests.filter((x) => x !== i) : [...s.interests, i] })),
-      addXp: (n) => update((s) => ({ xp: s.xp + n })),
-      completeLessonTask: () => update((s) => ({ lessonProgress: Math.min(10, s.lessonProgress + 1) })),
+      award: (questionId, xp) => {
+        if (read().rewarded.includes(questionId)) return false;
+        update((s) => ({ xp: s.xp + xp, rewarded: [...s.rewarded, questionId] }));
+        return true;
+      },
+      completeTask: (taskId) => update((s) => (s.completed.includes(taskId) ? {} : { completed: [...s.completed, taskId] })),
+      setCursor: (cursor) => update(() => ({ cursor })),
       finishOnboarding: () => update(() => ({ onboarded: true })),
       saveAssessment: (answers) => update(() => ({ assessment: answers })),
       reset: () => write(initial),

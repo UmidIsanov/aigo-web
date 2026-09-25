@@ -160,10 +160,11 @@ type Question = { task: string; answer: Actor; options: { actor: Actor; hint: st
 function QuizStep({ onNext }: { onNext: () => void }) {
   const t = useTranslations('onboarding.quiz');
   const tp = useTranslations('professions.actors');
-  const { addXp } = useProgress();
+  const { award } = useProgress();
   const questions = t.raw('questions') as Question[];
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<Actor | null>(null);
+  const [gotXp, setGotXp] = useState(false);
   const [earned, setEarned] = useState(0);
   const q = questions[index];
   const correct = picked === q.answer;
@@ -172,10 +173,10 @@ function QuizStep({ onNext }: { onNext: () => void }) {
   const pick = (a: Actor) => {
     if (picked) return;
     setPicked(a);
-    if (a === q.answer) {
-      addXp(10);
-      setEarned((e) => e + 10);
-    }
+    // XP is paid once per question, so going back and re-answering doesn't farm points.
+    const paid = a === q.answer && award(`quiz-${index + 1}`, 10);
+    setGotXp(paid);
+    if (paid) setEarned((e) => e + 10);
   };
 
   const advance = () => {
@@ -225,7 +226,7 @@ function QuizStep({ onNext }: { onNext: () => void }) {
 
         {picked ? (
           <div className={clsx('mt-4 animate-rise rounded-3xl bg-surface p-5 ring-2', correct ? 'ring-success' : 'ring-coral')}>
-            <p className={clsx('font-display font-semibold', correct ? 'text-success' : 'text-coral-ink')}>{correct ? t('correct') : t('wrong')}</p>
+            <p className={clsx('font-display font-semibold', correct ? 'text-success' : 'text-coral-ink')}>{correct ? (gotXp ? t('correct') : t('correctNoXp')) : t('wrong')}</p>
             <p className="mt-1 leading-relaxed">{q.explanation}</p>
           </div>
         ) : null}
@@ -248,10 +249,11 @@ const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
 
 function CheckStep({ onNext }: { onNext: () => void }) {
   const t = useTranslations('onboarding.check');
-  const { addXp, saveAssessment } = useProgress();
+  const { award, saveAssessment } = useProgress();
   const questions = t.raw('questions') as CheckQuestion[];
   const [index, setIndex] = useState(0);
   const [picked, setPicked] = useState<number | null>(null);
+  const [gotXp, setGotXp] = useState(false);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [showResult, setShowResult] = useState(false);
   const q = questions[index];
@@ -262,7 +264,7 @@ function CheckStep({ onNext }: { onNext: () => void }) {
     if (picked !== null) return;
     setPicked(i);
     setAnswers((a) => [...a, i === q.answer]);
-    if (i === q.answer) addXp(10);
+    setGotXp(i === q.answer && award(`check-${index + 1}`, 10));
   };
 
   const advance = () => {
@@ -328,7 +330,7 @@ function CheckStep({ onNext }: { onNext: () => void }) {
 
         {picked !== null ? (
           <div className={clsx('mt-4 animate-rise rounded-3xl bg-surface p-5 ring-2', correct ? 'ring-success' : 'ring-coral')}>
-            <p className={clsx('font-display font-semibold', correct ? 'text-success' : 'text-coral-ink')}>{correct ? t('correct') : t('wrong')}</p>
+            <p className={clsx('font-display font-semibold', correct ? 'text-success' : 'text-coral-ink')}>{correct ? (gotXp ? t('correct') : t('correctNoXp')) : t('wrong')}</p>
             <p className="mt-1 leading-relaxed">{q.explanation}</p>
           </div>
         ) : null}

@@ -426,7 +426,8 @@
           ],
           "explanation": "AI can suggest ideas, but the decision and the responsibility are yours."
         }
-      ]
+      ],
+      "correctNoXp": "Correct! You already got XP for this question."
     },
     "check": {
       "badge": "Thinking check",
@@ -519,7 +520,8 @@
           "answer": 2,
           "explanation": "First understand the problem: who the site is for and what it needs. Code, design and AI come next."
         }
-      ]
+      ],
+      "correctNoXp": "Correct! You already got XP for this question."
     },
     "insight": {
       "badge": "Key idea",
@@ -577,8 +579,8 @@
     "xp": "{current} / {max} XP",
     "toLevel": "to {title}",
     "streak": "{days, plural, one {# day} other {# days}} in a row",
-    "module": "Module 1 · AI World",
-    "lessonTitle": "Lesson 3. Can you trust AI?",
+    "module": "Module {n} · {name}",
+    "lessonTitle": "Lesson {n}. {title}",
     "continue": "Continue",
     "challenge": "Weekly challenge",
     "challengeText": "Learn a new AI tool in 15 minutes and solve a task with it",
@@ -591,7 +593,10 @@
       "title": "My path",
       "subtitle": "12 modules: from understanding AI to your own AI product.",
       "current": "Now",
-      "locked": "Soon"
+      "locked": "Soon",
+      "lessonsDone": "{done} of {total} tasks",
+      "open": "Open",
+      "done": "Done"
     },
     "portfolioPage": {
       "title": "Portfolio",
@@ -613,30 +618,365 @@
       "next": "Your next project unlocks after Module 2"
     },
     "lesson": {
-      "header": "Lesson 3 · Task {n}/10",
-      "topic": "Checking AI answers",
-      "task": "Task",
-      "claim": "AI said: “The Great Wall of China is visible from space with the naked eye.” Is that true?",
-      "options": [
-        "Yes, everyone knows that",
-        "No, it’s a myth",
-        "Sounds right, no need to check"
-      ],
+      "header": "Module {module} · Lesson {lesson}",
+      "taskOf": "Task {n} of {total}",
       "choose": "Choose an answer:",
       "tryAgain": "Try again:",
       "hint1Label": "AI Tutor · Hint 1",
-      "hint1": "Not so fast! “Everyone knows” doesn’t mean “checked”. Try to remember what astronauts themselves say.",
       "hint2Label": "AI Tutor · Hint 2",
-      "hint2": "The wall is very long but narrow — just a few meters wide. Could you see something as wide as a road from 400 km up?",
       "explainLabel": "AI Tutor · Explanation",
       "successLabel": "Great job! +{xp} XP",
-      "explanation": "It’s a popular myth. Astronauts, including Yang Liwei — China’s first astronaut, said they could not see the wall from orbit with the naked eye. AI repeated a common mistake — that’s why AI answers need checking.",
+      "successNoXp": "Correct!",
+      "alreadyDone": "You’ve already solved this task — XP is only awarded once.",
       "moreHint": "Another hint",
       "back": "Back to home",
+      "next": "Next task",
+      "nextLesson": "Next lesson",
+      "nextModule": "Next module",
+      "lessonDone": "Lesson “{title}” complete!",
+      "moduleDone": "Module {module} complete!",
+      "courseDoneTitle": "All available modules complete!",
+      "courseDoneText": "You finished modules 1–3. New modules are coming soon — meanwhile you can replay any lesson on the “My path” page.",
+      "toPath": "My path",
       "howTitle": "How AI Tutor helps",
       "howNote": "The answer comes last. First, you think."
     },
     "demoName": "Alex",
-    "startLevel": "Starting level: {level}"
+    "startLevel": "Starting level: {level}",
+    "courseDone": "Modules 1–3 complete 🎉"
+  },
+  "course": {
+    "modules": [
+      {
+        "lessons": [
+          {
+            "title": "Where AI is already around you",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Which of these uses AI?",
+                "options": [
+                  "YouTube video recommendations",
+                  "A basic calculator",
+                  "A light switch",
+                  "A paper map"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Think about which of these adapts to you personally.",
+                  "Which system “learns” from what you watch and like?"
+                ],
+                "explanation": "Recommendations are picked by AI: it analyzes what you watch and suggests similar things. A calculator just follows fixed rules — it doesn’t learn."
+              },
+              {
+                "difficulty": "medium",
+                "question": "A voice assistant followed the command “Play music”. What did it do?",
+                "options": [
+                  "Read your mind",
+                  "Turned speech into text and recognized the command",
+                  "Called an operator",
+                  "Guessed randomly"
+                ],
+                "answer": 1,
+                "hints": [
+                  "The assistant can’t see you — it only hears sound.",
+                  "First the sound has to become something a program can work with."
+                ],
+                "explanation": "A voice assistant first recognizes speech and turns it into text, then AI understands the meaning of the command. No magic, no mind reading."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Why does a social media filter sometimes work badly on some faces?",
+                "options": [
+                  "The phone is broken",
+                  "AI does it on purpose",
+                  "AI learned from examples with few faces like that",
+                  "Because of slow internet"
+                ],
+                "answer": 2,
+                "hints": [
+                  "Remember: AI learns from examples. What if there are few examples?",
+                  "If some faces were almost missing in training, AI “doesn’t know” how to handle them."
+                ],
+                "explanation": "AI learns from data. If the data had few examples of certain faces, AI makes mistakes exactly on them. That’s why developers need diverse data."
+              }
+            ]
+          },
+          {
+            "title": "Can you trust AI?",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI confidently named a book that doesn’t exist. What is this called?",
+                "options": [
+                  "A virus",
+                  "An update",
+                  "A developer joke",
+                  "An AI hallucination"
+                ],
+                "answer": 3,
+                "hints": [
+                  "It’s a special word for when AI confidently makes up facts.",
+                  "The word is usually about “seeing” something that isn’t there."
+                ],
+                "explanation": "When AI confidently invents facts, books or links, it’s called a hallucination. That’s why important facts always need checking."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI said: “The Great Wall of China is visible from space with the naked eye.” Is that true?",
+                "options": [
+                  "Yes, everyone knows that",
+                  "No, it’s a myth",
+                  "Sounds right, no need to check",
+                  "True, but only at night"
+                ],
+                "answer": 1,
+                "hints": [
+                  "“Everyone knows” doesn’t mean “checked”. What do astronauts say?",
+                  "The wall is long but narrow — a few meters. Could you see something as wide as a road from 400 km?"
+                ],
+                "explanation": "It’s a popular myth. Astronauts, including Yang Liwei — China’s first astronaut, said they could not see the wall from orbit with the naked eye. AI repeated a common mistake."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI named the winner of an important match last week. What’s the most reliable way to check?",
+                "options": [
+                  "Find the official website or news from at least two sources",
+                  "Ask AI “are you sure?”",
+                  "Believe it if the answer is long and detailed",
+                  "Ask one friend"
+                ],
+                "answer": 0,
+                "hints": [
+                  "AI may not know recent events. Where are match results published?",
+                  "Reliable checking means independent sources, not the same AI."
+                ],
+                "explanation": "AI may not know recent events or may mix them up. The most reliable check is an official source or news from two different places. Asking the same AI “are you sure?” proves nothing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "lessons": [
+          {
+            "title": "Asking good questions",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "You were asked to make a presentation. Which question helps you understand the task best?",
+                "options": [
+                  "“Is it hard?”",
+                  "“Who will watch it and what should they understand?”",
+                  "“Can I skip it?”",
+                  "“Which font looks nicer?”"
+                ],
+                "answer": 1,
+                "hints": [
+                  "A good question clarifies the goal, not design details.",
+                  "Think about the people the presentation is for."
+                ],
+                "explanation": "Understanding the audience and the goal is the basis of any task. Fonts and design matter, but only after you know why and for whom you’re working."
+              },
+              {
+                "difficulty": "medium",
+                "question": "A friend says: “I’m bored in class.” Which question is best to ask first?",
+                "options": [
+                  "“Why don’t you listen?”",
+                  "“Want me to tell the teacher?”",
+                  "“In which classes and at what moments are you bored?”",
+                  "“I’m fine, though”"
+                ],
+                "answer": 2,
+                "hints": [
+                  "First understand the problem, don’t solve it or argue.",
+                  "A good question clarifies: where, when, why."
+                ],
+                "explanation": "A clarifying question helps you find the real cause. Maybe it’s only one subject, or only when everything is already clear. The solution comes later."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Your team is arguing about which game to make for a contest. What’s the best way to decide?",
+                "options": [
+                  "Pick the idea of whoever is loudest",
+                  "Write down criteria (time, interest, difficulty) and compare ideas",
+                  "Ask AI to choose for everyone",
+                  "Flip a coin"
+                ],
+                "answer": 1,
+                "hints": [
+                  "A good decision can be explained, not just “it happened”.",
+                  "Try judging all ideas by the same rules."
+                ],
+                "explanation": "Criteria make a decision fair and clear for the whole team. AI can help compare ideas, but choosing and owning the decision is up to you."
+              }
+            ]
+          },
+          {
+            "title": "Creativity and testing ideas",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Which approach helps you come up with more ideas?",
+                "options": [
+                  "Pick the first idea right away",
+                  "Wait for inspiration",
+                  "Copy a friend’s idea",
+                  "Write down 10 ideas without judging, then choose"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Judging too early “kills” new ideas.",
+                  "Quantity first, quality later."
+                ],
+                "explanation": "First write everything down without judging — that’s how unexpected ideas appear. Choosing and improving works better as a second step."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI suggested 20 ideas for a school project. What next?",
+                "options": [
+                  "Rate the ideas by criteria and develop the best one in your own words",
+                  "Take the first idea",
+                  "Take all ideas at once",
+                  "Ask for 100 more ideas"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Lots of ideas is only the start of the work.",
+                  "What makes an idea truly yours?"
+                ],
+                "explanation": "AI is good at generating options; people are good at choosing and refining. Rate the ideas, pick the best one and make it yours: add your own experience and interests."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "You made a poster, but your classmates didn’t get it. What’s the best next step?",
+                "options": [
+                  "Decide they just don’t get it",
+                  "Throw the poster away",
+                  "Ask what was unclear and improve the poster",
+                  "Make the font bigger without asking anyone"
+                ],
+                "answer": 2,
+                "hints": [
+                  "Feedback is a hint, not an insult.",
+                  "To fix it, you first need to know what exactly is wrong."
+                ],
+                "explanation": "Feedback helps improve your work. First find out what exactly is unclear, then fix it. Designers and developers work the same way: try → get feedback → improve."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "lessons": [
+          {
+            "title": "Task and context",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "What matters most to add to the request “Make a workout plan”?",
+                "options": [
+                  "More exclamation marks",
+                  "Context: age, goal and how much time you have",
+                  "The word “please” five times",
+                  "Nothing, AI will figure it out"
+                ],
+                "answer": 1,
+                "hints": [
+                  "AI knows nothing about you until you tell it.",
+                  "A plan for a pro athlete and for a 12-year-old beginner is different."
+                ],
+                "explanation": "Context is the most important part of a request. Without it AI gives a generic answer. With your age, goal and time, the plan will fit you."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Which request is best if you need to understand photosynthesis?",
+                "options": [
+                  "“Photosynthesis”",
+                  "“Tell me everything about plants”",
+                  "“Explain it like to a biology professor”",
+                  "“Explain photosynthesis to a 6th grader in 5 sentences with a real-life example”"
+                ],
+                "answer": 3,
+                "hints": [
+                  "A good request says who the answer is for and how long it should be.",
+                  "Find the option with an audience, a length and an example."
+                ],
+                "explanation": "A good request has a topic, an audience, a length and a format. The answer will be clear and not too long."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "You’re doing an ecology project with AI. How should you organize the work?",
+                "options": [
+                  "Break it into steps: ideas → plan → text → fact-check",
+                  "Ask AI to do the whole project at once",
+                  "Copy the first answer",
+                  "Ask once and never clarify"
+                ],
+                "answer": 0,
+                "hints": [
+                  "A big task is easier to solve in parts.",
+                  "At which step do you check that AI didn’t make mistakes?"
+                ],
+                "explanation": "A complex task is better broken into steps. At every step you control the result, and at the end you check the facts. The project stays yours, and AI is the helper."
+              }
+            ]
+          },
+          {
+            "title": "Improving the answer",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI gave an answer that’s too complicated. What’s best to write?",
+                "options": [
+                  "“Wrong!”",
+                  "Close the chat",
+                  "“Explain it more simply, like to an 11-year-old, with an example”",
+                  "Ask the same question again"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI doesn’t know the answer didn’t work for you until you say why.",
+                  "Say what the answer should be like."
+                ],
+                "explanation": "Talking to AI is a dialogue. If an answer didn’t work, explain what to change: simpler, shorter, with an example. The second answer is usually much better."
+              },
+              {
+                "difficulty": "medium",
+                "question": "You need a name for a school blog. Which request is better?",
+                "options": [
+                  "“Give me a name”",
+                  "“Suggest 5 different names for a science blog for teens and explain the pros of each”",
+                  "“Make it better”",
+                  "“More”"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Several options beat one: you have something to choose from.",
+                  "A good request explains what the blog is about and who it’s for."
+                ],
+                "explanation": "Asking for several options with explanations gives you a choice and shows how they differ. The decision stays with you."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI wrote a story, but the ending is boring. Which request is best?",
+                "options": [
+                  "“Redo it”",
+                  "“Bad”",
+                  "“Write a new story”",
+                  "“Keep the beginning, rewrite only the ending: a surprising twist, 5 sentences, a happy finish”"
+                ],
+                "answer": 3,
+                "hints": [
+                  "No need to rewrite everything if only one part is bad.",
+                  "Say exactly what to keep, what to change and what the result should be."
+                ],
+                "explanation": "The best improvement request says what to keep, what to change and what result you need. That way AI won’t spoil what already works."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

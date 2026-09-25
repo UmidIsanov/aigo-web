@@ -3,13 +3,21 @@
 import { ArrowRight, Flame, Sparkles, Trophy } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { CourseModule, currentTask, flattenCourse, taskId } from '@/lib/course';
 import { assessmentLevel, levelInfo, useProgress, XP_PER_LEVEL } from '@/lib/progress';
 import { buttonClass, Chip, ProgressBar } from '../ui';
 
 export function Dashboard() {
   const t = useTranslations('app');
   const tInterests = useTranslations('onboarding.interests');
-  const { xp, lessonProgress, interests, assessment, reset } = useProgress();
+  const { xp, interests, assessment, completed, cursor, reset } = useProgress();
+  const modules = useTranslations('course').raw('modules') as CourseModule[];
+  const moduleNames = (useTranslations('program').raw('modules') as { name: string }[]).map((m) => m.name);
+  const refs = flattenCourse(modules);
+  const current = currentTask(refs, completed, cursor);
+  const lesson = current ? modules[current.module].lessons[current.lesson] : null;
+  const lessonDone = current ? lesson!.tasks.filter((_, i) => completed.includes(taskId(current.module, current.lesson, i))).length : 0;
+  const doneIn = (module: number) => refs.filter((r) => r.module === module - 1 && completed.includes(r.id)).length;
   const lvl = levelInfo(xp);
   const interestNames = (tInterests.raw('items') as string[]).filter((_, i) => interests.includes(i));
   const tCheck = useTranslations('onboarding.check');
@@ -17,17 +25,17 @@ export function Dashboard() {
   const score = assessment?.filter(Boolean).length ?? 0;
   const level = assessment ? assessmentLevel(score, assessment.length) : null;
 
-  // Starting skill values come from the onboarding thinking check; lessons add fact-checking practice.
+  // Starting skill values come from the onboarding thinking check; each finished course task adds practice.
   const skillValue = (skill: string, bonus = 0) => {
     const idx = checkQuestions.flatMap((q, i) => (q.skill === skill ? [i] : []));
     const right = idx.filter((i) => assessment?.[i]).length;
     return Math.min(100, 20 + Math.round((right / Math.max(1, idx.length)) * 50) + bonus);
   };
   const skills = [
-    { name: tCheck('skills.prompting'), value: skillValue('prompting'), bar: 'bg-brand' },
-    { name: tCheck('skills.critical'), value: skillValue('critical', (lessonProgress - 3) * 5), bar: 'bg-coral' },
+    { name: tCheck('skills.prompting'), value: skillValue('prompting', doneIn(3) * 4), bar: 'bg-brand' },
+    { name: tCheck('skills.critical'), value: skillValue('critical', doneIn(1) * 4), bar: 'bg-coral' },
     { name: tCheck('skills.logic'), value: skillValue('logic'), bar: 'bg-sky' },
-    { name: tCheck('skills.problem'), value: skillValue('problem'), bar: 'bg-lime' },
+    { name: tCheck('skills.problem'), value: skillValue('problem', doneIn(2) * 4), bar: 'bg-lime' },
   ];
 
   return (
@@ -48,16 +56,34 @@ export function Dashboard() {
       <div className="grid gap-5 lg:grid-cols-[1.4fr_1fr]">
         <div className="relative overflow-hidden rounded-[28px] bg-brand p-7 text-white">
           <div className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-lime/25 blur-2xl" />
-          <p className="relative text-xs font-bold uppercase tracking-widest text-lime">{t('module')}</p>
-          <h2 className="relative mt-3 font-display text-2xl font-bold leading-tight">{t('lessonTitle')}</h2>
-          <div className="relative mt-6 flex items-center gap-3">
-            <ProgressBar value={lessonProgress * 10} className="flex-1 bg-white/25" barClassName="bg-lime" />
-            <span className="text-sm font-semibold">{lessonProgress}/10</span>
-          </div>
-          <Link href="/app/lesson" className={buttonClass('white', 'md', 'relative mt-7')}>
-            {t('continue')}
-            <ArrowRight className="size-4" />
-          </Link>
+          {current && lesson ? (
+            <>
+              <p className="relative text-xs font-bold uppercase tracking-widest text-lime">
+                {t('module', { n: current.module + 1, name: moduleNames[current.module] })}
+              </p>
+              <h2 className="relative mt-3 font-display text-2xl font-bold leading-tight">
+                {t('lessonTitle', { n: current.lesson + 1, title: lesson.title })}
+              </h2>
+              <div className="relative mt-6 flex items-center gap-3">
+                <ProgressBar value={(lessonDone / lesson.tasks.length) * 100} className="flex-1 bg-white/25" barClassName="bg-lime" />
+                <span className="text-sm font-semibold">
+                  {lessonDone}/{lesson.tasks.length}
+                </span>
+              </div>
+              <Link href="/app/lesson" className={buttonClass('white', 'md', 'relative mt-7')}>
+                {t('continue')}
+                <ArrowRight className="size-4" />
+              </Link>
+            </>
+          ) : (
+            <>
+              <h2 className="relative font-display text-2xl font-bold leading-tight">{t('courseDone')}</h2>
+              <Link href="/app/path" className={buttonClass('white', 'md', 'relative mt-7')}>
+                {t('nav.path')}
+                <ArrowRight className="size-4" />
+              </Link>
+            </>
+          )}
         </div>
 
         <div className="rounded-[28px] bg-surface p-6 ring-1 ring-line">

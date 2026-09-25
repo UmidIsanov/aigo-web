@@ -23,7 +23,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   ] as const;
 
   return (
-    <div className="min-h-screen bg-canvas lg:grid lg:grid-cols-[260px_1fr]">
+    <div className="min-h-screen bg-canvas lg:grid lg:grid-cols-[260px_1fr] lg:bg-[linear-gradient(to_right,var(--color-surface)_259px,var(--color-line)_259px,var(--color-line)_260px,var(--color-canvas)_260px)]">
       <aside className="sticky top-0 hidden h-screen flex-col border-r border-line bg-surface p-5 lg:flex">
         <Logo className="px-2" />
         <nav className="mt-10 flex flex-col gap-1">

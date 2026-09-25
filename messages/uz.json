@@ -426,7 +426,8 @@
           ],
           "explanation": "AI g‘oyalar taklif qilishi mumkin, lekin qaror va mas’uliyat — seniki."
         }
-      ]
+      ],
+      "correctNoXp": "To‘g‘ri! Bu savol uchun XP allaqachon olingan."
     },
     "check": {
       "badge": "Fikrlashni tekshirish",
@@ -519,7 +520,8 @@
           "answer": 2,
           "explanation": "Avval vazifani tushunish kerak: sayt kim uchun va unda nima bo‘lishi kerak. Kod, dizayn va AI — keyingi qadamlar."
         }
-      ]
+      ],
+      "correctNoXp": "To‘g‘ri! Bu savol uchun XP allaqachon olingan."
     },
     "insight": {
       "badge": "Eng muhimi",
@@ -577,8 +579,8 @@
     "xp": "{current} / {max} XP",
     "toLevel": "{title} darajasigacha",
     "streak": "{days} kun ketma-ket",
-    "module": "1-modul · AI World",
-    "lessonTitle": "3-dars. AI’ga ishonsa bo‘ladimi?",
+    "module": "{n}-modul · {name}",
+    "lessonTitle": "{n}-dars. {title}",
     "continue": "Davom etish",
     "challenge": "Hafta challenge’i",
     "challengeText": "15 daqiqada yangi AI vositasini o‘zlashtir va u bilan vazifani hal qil",
@@ -591,7 +593,10 @@
       "title": "Mening yo‘lim",
       "subtitle": "12 ta modul: AI’ni tushunishdan o‘z AI mahsulotingacha.",
       "current": "Hozir",
-      "locked": "Tez orada"
+      "locked": "Tez orada",
+      "lessonsDone": "{total} tadan {done} ta topshiriq",
+      "open": "Ochish",
+      "done": "Tugadi"
     },
     "portfolioPage": {
       "title": "Portfolio",
@@ -613,30 +618,365 @@
       "next": "Keyingi loyiha 2-moduldan keyin ochiladi"
     },
     "lesson": {
-      "header": "3-dars · {n}/10-topshiriq",
-      "topic": "AI javoblarini tekshirish",
-      "task": "Topshiriq",
-      "claim": "AI javob berdi: «Buyuk Xitoy devorini koinotdan oddiy ko‘z bilan ko‘rish mumkin». Bu rostmi?",
-      "options": [
-        "Ha, bu hammaga ma’lum fakt",
-        "Yo‘q, bu afsona",
-        "Rostga o‘xshaydi, tekshirish shart emas"
-      ],
+      "header": "{module}-modul · {lesson}-dars",
+      "taskOf": "Topshiriq {n}/{total}",
       "choose": "Javobni tanla:",
       "tryAgain": "Yana urinib ko‘r:",
       "hint1Label": "AI Tutor · Maslahat 1",
-      "hint1": "Shoshilma! «Hammaga ma’lum» degani «tekshirilgan» degani emas. Kosmonavtlarning o‘zlari nima deganini eslab ko‘r.",
       "hint2Label": "AI Tutor · Maslahat 2",
-      "hint2": "Devor juda uzun, lekin tor — atigi bir necha metr. 400 km balandlikdan yo‘l kengligidagi narsani ko‘rish mumkinmi?",
       "explainLabel": "AI Tutor · Tahlil",
       "successLabel": "Zo‘r! +{xp} XP",
-      "explanation": "Bu mashhur afsona. Kosmonavtlar, jumladan Xitoyning birinchi kosmonavti Yan Livey ham devorni orbitadan oddiy ko‘z bilan ko‘rmaganini aytgan. AI keng tarqalgan xatoni takrorladi — shuning uchun AI javoblarini tekshirish kerak.",
+      "successNoXp": "To‘g‘ri!",
+      "alreadyDone": "Bu topshiriqni allaqachon yechgansan — XP faqat bir marta beriladi.",
       "moreHint": "Yana maslahat",
       "back": "Asosiyga",
+      "next": "Keyingi topshiriq",
+      "nextLesson": "Keyingi dars",
+      "nextModule": "Keyingi modul",
+      "lessonDone": "«{title}» darsi tugadi!",
+      "moduleDone": "{module}-modul tugadi!",
+      "courseDoneTitle": "Barcha ochiq modullar tugadi!",
+      "courseDoneText": "Sen 1–3-modullarni tugatding. Yangi modullar tez orada ochiladi — hozircha «Mening yo‘lim» sahifasida istalgan darsni takrorlashing mumkin.",
+      "toPath": "Mening yo‘lim",
       "howTitle": "AI Tutor qanday yordam beradi",
       "howNote": "Tayyor javob — faqat oxirida. Avval o‘zing o‘ylaysan."
     },
     "demoName": "Aziz",
-    "startLevel": "Boshlang‘ich daraja: {level}"
+    "startLevel": "Boshlang‘ich daraja: {level}",
+    "courseDone": "1–3-modullar tugadi 🎉"
+  },
+  "course": {
+    "modules": [
+      {
+        "lessons": [
+          {
+            "title": "AI allaqachon atrofingda",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Ulardan qaysi biri AI yordamida ishlaydi?",
+                "options": [
+                  "YouTube’dagi video tavsiyalari",
+                  "Oddiy kalkulyator",
+                  "Chiroq o‘chirgichi",
+                  "Qog‘oz xarita"
+                ],
+                "answer": 0,
+                "hints": [
+                  "O‘ylab ko‘r: qaysi biri aynan senga moslashadi?",
+                  "Qaysi tizim sen ko‘rgan va yoqtirgan narsalardan «o‘rganadi»?"
+                ],
+                "explanation": "Tavsiyalarni AI tanlaydi: u nimani ko‘rayotganingni tahlil qilib, o‘xshashini taklif qiladi. Kalkulyator esa qat’iy qoidalar bo‘yicha hisoblaydi — u o‘rganmaydi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Ovozli yordamchi «Musiqa qo‘y» buyrug‘ini bajardi. U nima qildi?",
+                "options": [
+                  "Fikringni o‘qidi",
+                  "Nutqni matnga aylantirib, buyruqni tanidi",
+                  "Operatorga qo‘ng‘iroq qildi",
+                  "Tasodifan topdi"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Yordamchi seni ko‘rmaydi — u faqat ovozni eshitadi.",
+                  "Avval ovozni dastur ishlay oladigan narsaga aylantirish kerak."
+                ],
+                "explanation": "Ovozli yordamchi avval nutqni taniydi va matnga aylantiradi, keyin AI buyruq ma’nosini tushunadi. Hech qanday sehr yoki fikr o‘qish yo‘q."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Nega ijtimoiy tarmoqdagi filtr ba’zi yuzlarda yomon ishlaydi?",
+                "options": [
+                  "Telefon buzilgan",
+                  "AI buni ataylab qiladi",
+                  "AI bunday yuzlar kam bo‘lgan misollarda o‘rgangan",
+                  "Internet sekinligi sababli"
+                ],
+                "answer": 2,
+                "hints": [
+                  "Esla: AI misollar asosida o‘rganadi. Misollar kam bo‘lsa-chi?",
+                  "Agar o‘rganishda ba’zi yuzlar deyarli bo‘lmagan bo‘lsa, AI ular bilan qanday ishlashni «bilmaydi»."
+                ],
+                "explanation": "AI ma’lumotlardan o‘rganadi. Agar ularda ba’zi yuzlar kam bo‘lsa, AI aynan ularda xato qiladi. Shuning uchun dasturchilarga xilma-xil ma’lumotlar kerak."
+              }
+            ]
+          },
+          {
+            "title": "AI’ga ishonsa bo‘ladimi?",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI mavjud bo‘lmagan kitobni ishonch bilan aytdi. Bu nima deb ataladi?",
+                "options": [
+                  "Virus",
+                  "Yangilanish",
+                  "Dasturchilar hazili",
+                  "AI gallyutsinatsiyasi"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Bu AI faktlarni ishonch bilan o‘ylab topgan holatlar uchun maxsus so‘z.",
+                  "Bu so‘z odatda yo‘q narsani «ko‘rish» bilan bog‘liq."
+                ],
+                "explanation": "AI faktlar, kitoblar yoki havolalarni ishonch bilan o‘ylab topsa, bu gallyutsinatsiya deyiladi. Shuning uchun muhim faktlarni doim tekshirish kerak."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI javob berdi: «Buyuk Xitoy devorini koinotdan oddiy ko‘z bilan ko‘rish mumkin». Bu rostmi?",
+                "options": [
+                  "Ha, bu hammaga ma’lum fakt",
+                  "Yo‘q, bu afsona",
+                  "Rostga o‘xshaydi, tekshirish shart emas",
+                  "Rost, lekin faqat kechasi"
+                ],
+                "answer": 1,
+                "hints": [
+                  "«Hammaga ma’lum» degani «tekshirilgan» degani emas. Kosmonavtlar nima deydi?",
+                  "Devor uzun, lekin tor — bir necha metr. 400 km balandlikdan yo‘l kengligidagi narsa ko‘rinadimi?"
+                ],
+                "explanation": "Bu mashhur afsona. Kosmonavtlar, jumladan Xitoyning birinchi kosmonavti Yan Livey devorni orbitadan oddiy ko‘z bilan ko‘rmaganini aytgan. AI keng tarqalgan xatoni takrorladi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI o‘tgan haftadagi muhim o‘yin g‘olibini aytdi. Buni qanday qilib eng ishonchli tekshirish mumkin?",
+                "options": [
+                  "Rasmiy saytni yoki kamida ikki manbadagi yangiliklarni topish",
+                  "AI’dan «ishonchingiz komilmi?» deb so‘rash",
+                  "Javob uzun va batafsil bo‘lsa, ishonish",
+                  "Bitta do‘stdan so‘rash"
+                ],
+                "answer": 0,
+                "hints": [
+                  "AI yangi voqealarni bilmasligi mumkin. O‘yin natijalari qayerda e’lon qilinadi?",
+                  "Ishonchli tekshiruv — mustaqil manbalar, o‘sha AI emas."
+                ],
+                "explanation": "AI yangi voqealarni bilmasligi yoki adashtirishi mumkin. Eng ishonchlisi — rasmiy manba yoki ikki xil joydagi yangiliklar. O‘sha AI’dan qayta so‘rash hech narsani isbotlamaydi."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "lessons": [
+          {
+            "title": "Yaxshi savol berish",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Senga taqdimot tayyorlash topshirildi. Qaysi savol vazifani yaxshiroq tushunishga yordam beradi?",
+                "options": [
+                  "«Bu qiyinmi?»",
+                  "«Uni kim ko‘radi va ular nimani tushunishi kerak?»",
+                  "«Qilmasam bo‘ladimi?»",
+                  "«Qaysi shrift chiroyliroq?»"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Yaxshi savol bezak tafsilotlarini emas, maqsadni aniqlaydi.",
+                  "Taqdimot kimlar uchun tayyorlanayotganini o‘ylab ko‘r."
+                ],
+                "explanation": "Auditoriya va maqsadni tushunish — har qanday vazifaning asosi. Shrift va bezak muhim, lekin nima uchun va kim uchun ishlayotganing aniq bo‘lgandan keyin."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Do‘sting: «Darslarda zerikaman», deydi. Birinchi navbatda qaysi savolni bergan yaxshi?",
+                "options": [
+                  "«Nega tinglamaysan?»",
+                  "«O‘qituvchiga aytaymi?»",
+                  "«Qaysi darslarda va qaysi paytlarda zerikasan?»",
+                  "«Menga esa yaxshi»"
+                ],
+                "answer": 2,
+                "hints": [
+                  "Avval muammoni tushunish kerak, uni hal qilish yoki bahslashish emas.",
+                  "Yaxshi savol aniqlaydi: qayerda, qachon, nima uchun."
+                ],
+                "explanation": "Aniqlashtiruvchi savol haqiqiy sababni topishga yordam beradi. Balki faqat bitta fanda yoki hammasi tushunarli bo‘lganda zerikar. Yechim keyin paydo bo‘ladi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Jamoa tanlov uchun qaysi o‘yinni yaratish haqida bahslashmoqda. Qanday qaror qabul qilgan ma’qul?",
+                "options": [
+                  "Kim balandroq gapirsa, o‘shaning g‘oyasini tanlash",
+                  "Mezonlarni (vaqt, qiziqish, murakkablik) yozib, g‘oyalarni solishtirish",
+                  "Hamma uchun AI tanlashini so‘rash",
+                  "Tanga tashlash"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Yaxshi qarorni tushuntirib berish mumkin, u shunchaki «shunday bo‘lib qolgan» emas.",
+                  "Barcha g‘oyalarni bir xil qoidalar bo‘yicha baholab ko‘r."
+                ],
+                "explanation": "Mezonlar qarorni butun jamoa uchun adolatli va tushunarli qiladi. AI g‘oyalarni solishtirishga yordam berishi mumkin, lekin tanlash va javob berish — sizning ishingiz."
+              }
+            ]
+          },
+          {
+            "title": "Ijodkorlik va g‘oyalarni sinash",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Qaysi usul ko‘proq g‘oya topishga yordam beradi?",
+                "options": [
+                  "Birinchi g‘oyani darhol tanlash",
+                  "Ilhom kutish",
+                  "Do‘stning g‘oyasini ko‘chirish",
+                  "Tanqidsiz 10 ta g‘oya yozib, keyin tanlash"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Boshida tanqid qilish yangi g‘oyalarni «o‘ldiradi».",
+                  "Avval miqdor, keyin sifat."
+                ],
+                "explanation": "Avval hammasini tanqid qilmasdan yoz — kutilmagan g‘oyalar shunday paydo bo‘ladi. Tanlash va yaxshilash ikkinchi qadamda yaxshiroq ishlaydi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI maktab loyihasi uchun 20 ta g‘oya taklif qildi. Keyin nima?",
+                "options": [
+                  "G‘oyalarni mezonlar bo‘yicha baholab, eng yaxshisini o‘z so‘zlaring bilan rivojlantirish",
+                  "Birinchi g‘oyani olish",
+                  "Hamma g‘oyalarni birdan olish",
+                  "Yana 100 ta g‘oya so‘rash"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Ko‘p g‘oya — ishning faqat boshlanishi.",
+                  "G‘oyani aynan seniki qiladigan narsa nima?"
+                ],
+                "explanation": "AI variantlar yaratishda kuchli, inson esa tanlash va takomillashtirishda. G‘oyalarni baholab, eng yaxshisini tanla va uni o‘zingniki qil: tajribang va qiziqishlaringni qo‘sh."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Sen plakat tayyorlading, lekin sinfdoshlar uni tushunmadi. Keyingi eng yaxshi qadam qaysi?",
+                "options": [
+                  "Ular hech narsani tushunmaydi, deb qaror qilish",
+                  "Plakatni tashlab yuborish",
+                  "Nima tushunarsiz ekanini so‘rab, plakatni yaxshilash",
+                  "Hech kimdan so‘ramay shriftni kattalashtirish"
+                ],
+                "answer": 2,
+                "hints": [
+                  "Fikr-mulohaza — bu xafa bo‘lish uchun emas, maslahat.",
+                  "Tuzatish uchun avval aynan nima noto‘g‘ri ekanini bilish kerak."
+                ],
+                "explanation": "Fikr-mulohazalar ishni yaxshilashga yordam beradi. Avval nima tushunarsiz ekanini bil, keyin tuzat. Dizaynerlar ham, dasturchilar ham shunday ishlaydi: sinash → fikr olish → yaxshilash."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "lessons": [
+          {
+            "title": "Vazifa va kontekst",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "«Mashg‘ulot rejasini tuz» so‘roviga eng avvalo nimani qo‘shish kerak?",
+                "options": [
+                  "Ko‘proq undov belgilari",
+                  "Kontekst: yosh, maqsad va qancha vaqt borligi",
+                  "«Iltimos» so‘zini besh marta",
+                  "Hech narsa, AI o‘zi tushunadi"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Sen aytmaguningcha AI sen haqingda hech narsa bilmaydi.",
+                  "Professional sportchi va 12 yoshli yangi boshlovchi uchun reja har xil."
+                ],
+                "explanation": "Kontekst — so‘rovdagi eng muhim qism. Usiz AI umumiy javob beradi. Yosh, maqsad va vaqt ko‘rsatilsa, reja aynan senga mos keladi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Fotosintezni tushunish kerak bo‘lsa, qaysi so‘rov yaxshiroq?",
+                "options": [
+                  "«Fotosintez»",
+                  "«O‘simliklar haqida hammasini aytib ber»",
+                  "«Biologiya professoriga tushuntirgandek tushuntir»",
+                  "«Fotosintezni 6-sinf o‘quvchisiga 5 gapda, hayotiy misol bilan tushuntir»"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Yaxshi so‘rov javob kim uchunligini va qancha hajmda bo‘lishini aytadi.",
+                  "Auditoriya, hajm va misol bor variantni top."
+                ],
+                "explanation": "Yaxshi so‘rovda mavzu, auditoriya, hajm va format bo‘ladi. Shunda javob tushunarli va juda uzun bo‘lmaydi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Sen AI bilan ekologiya loyihasini qilyapsan. Ishni qanday tashkil qilgan ma’qul?",
+                "options": [
+                  "Qadamlarga bo‘lish: g‘oyalar → reja → matn → faktlarni tekshirish",
+                  "Butun loyihani birdan AI’ga topshirish",
+                  "Birinchi javobni ko‘chirish",
+                  "Bir marta so‘rab, hech narsani aniqlashtirmaslik"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Katta vazifani qismlarga bo‘lib hal qilish osonroq.",
+                  "Qaysi qadamda AI xato qilmaganini tekshirasan?"
+                ],
+                "explanation": "Murakkab vazifani qadamlarga bo‘lgan ma’qul. Har qadamda natijani sen boshqarasan, oxirida esa faktlarni tekshirasan. Shunda loyiha seniki bo‘lib qoladi, AI esa yordamchi."
+              }
+            ]
+          },
+          {
+            "title": "Javobni yaxshilaymiz",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI juda murakkab javob berdi. Nima deb yozgan yaxshi?",
+                "options": [
+                  "«Noto‘g‘ri!»",
+                  "Chatni yopish",
+                  "«Soddaroq, 11 yoshli bolaga tushuntirgandek, misol bilan tushuntir»",
+                  "Xuddi shu savolni yana berish"
+                ],
+                "answer": 2,
+                "hints": [
+                  "Sababini aytmaguningcha AI javob senga mos kelmaganini bilmaydi.",
+                  "Javob qanday bo‘lishi kerakligini ayt."
+                ],
+                "explanation": "AI bilan suhbat — bu muloqot. Javob mos kelmasa, nimani o‘zgartirish kerakligini tushuntir: soddaroq, qisqaroq, misol bilan. Ikkinchi javob odatda ancha yaxshi bo‘ladi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Maktab blogi uchun nom kerak. Qaysi so‘rov yaxshiroq?",
+                "options": [
+                  "«Nom ber»",
+                  "«O‘smirlar uchun fan haqidagi blogga 5 xil nom taklif qil va har birining afzalligini tushuntir»",
+                  "«Yaxshiroq qil»",
+                  "«Yana»"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Bitta emas, bir nechta variant yaxshiroq: tanlash imkoni bo‘ladi.",
+                  "Yaxshi so‘rov blog nima haqida va kim uchunligini tushuntiradi."
+                ],
+                "explanation": "Tushuntirish bilan bir nechta variant so‘rasang, tanlash imkoniyati paydo bo‘ladi va ularning farqini tushunasan. Qaror esa senda qoladi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI hikoya yozdi, lekin yakuni zerikarli. Qaysi so‘rov yaxshiroq?",
+                "options": [
+                  "«Qaytadan qil»",
+                  "«Yomon»",
+                  "«Yangi hikoya yoz»",
+                  "«Boshini qoldir, faqat yakunini qayta yoz: kutilmagan burilish, 5 gap, yaxshi yakun»"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Faqat bir joyi yomon bo‘lsa, hammasini qayta yozish shart emas.",
+                  "Aniq ayt: nimani qoldirish, nimani o‘zgartirish va natija qanday bo‘lishi kerak."
+                ],
+                "explanation": "Yaxshilash uchun eng yaxshi so‘rov nimani saqlash, nimani o‘zgartirish va qanday natija kerakligini aytadi. Shunda AI yaxshi chiqqan qismni buzmaydi."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
