@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -45,6 +47,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
         <NextIntlClientProvider>
           <ProgressProvider>{children}</ProgressProvider>
         </NextIntlClientProvider>
+        {/* Vercel Web Analytics (visits, pages, countries) and Speed Insights; they only report on Vercel deployments. */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
