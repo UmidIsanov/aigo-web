@@ -40,7 +40,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${onest.variable} ${unbounded.variable} h-full`}>
+    <html lang={locale} data-scroll-behavior="smooth" className={`${onest.variable} ${unbounded.variable} h-full`}>
       <body className="min-h-full">
         <NextIntlClientProvider>
           <ProgressProvider>{children}</ProgressProvider>

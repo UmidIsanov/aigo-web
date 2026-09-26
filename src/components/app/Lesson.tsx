@@ -5,8 +5,9 @@ import { ArrowLeft, ArrowRight, PartyPopper, Trophy } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
-import { CourseModule, currentTask, Difficulty, flattenCourse, nextTask, TaskRef } from '@/lib/course';
+import { Difficulty, nextTask, PathModule, TaskRef } from '@/lib/course';
 import { useProgress } from '@/lib/progress';
+import { usePath } from '@/lib/usePath';
 import { buttonClass, Chip, Tone } from '../ui';
 
 // AI Tutor hint ladder from the PRD: Mistake → Hint → Try again → Second hint → Explanation.
@@ -20,24 +21,22 @@ const difficultyLabel: Record<Difficulty, string> = { easy: 'Easy', medium: 'Med
 type Message = { from: 'me' | 'tutor'; label?: string; text: string; success?: boolean };
 
 export function Lesson() {
-  const modules = useTranslations('course').raw('modules') as CourseModule[];
-  const { completed, cursor } = useProgress();
-  const refs = flattenCourse(modules);
-  const ref = currentTask(refs, completed, cursor);
+  const { path, refs, current } = usePath();
 
-  if (!ref) return <CourseDone />;
+  if (!current) return <CourseDone />;
   // Keyed by task id so every task starts with a fresh hint ladder.
-  return <TaskView key={ref.id} modules={modules} refs={refs} current={ref} />;
+  return <TaskView key={current.id} path={path} refs={refs} current={current} />;
 }
 
-function TaskView({ modules, refs, current }: { modules: CourseModule[]; refs: TaskRef[]; current: TaskRef }) {
+function TaskView({ path, refs, current }: { path: PathModule[]; refs: TaskRef[]; current: TaskRef }) {
   const t = useTranslations('app.lesson');
   const ladder = useTranslations('tutor').raw('ladder') as string[];
   const { award, completeTask, setCursor } = useProgress();
   const [stage, setStage] = useState<Stage>('answering');
   const [messages, setMessages] = useState<Message[]>([]);
 
-  const lesson = modules[current.module].lessons[current.lesson];
+  const mod = path[current.module];
+  const lesson = mod.lessons[current.lesson];
   const task = lesson.tasks[current.task];
   const done = stage === 'solved' || stage === 'explained';
   const next = nextTask(refs, current.id);
@@ -93,7 +92,9 @@ function TaskView({ modules, refs, current }: { modules: CourseModule[]; refs: T
           </Link>
           <div className="min-w-0 flex-1">
             <p className="font-semibold">{t('header', { module: current.module + 1, lesson: current.lesson + 1 })}</p>
-            <p className="truncate text-sm text-muted">{lesson.title}</p>
+            <p className="truncate text-sm text-muted">
+              {mod.name} · {lesson.title}
+            </p>
           </div>
           <Chip tone={difficultyTone[task.difficulty]}>{difficultyLabel[task.difficulty]}</Chip>
         </div>

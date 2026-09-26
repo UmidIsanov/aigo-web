@@ -314,257 +314,36 @@
     "step": "Qadam {current}/{total}",
     "next": "Keyingisi",
     "back": "Orqaga",
+    "name": {
+      "title": "Salom! Isming nima?",
+      "subtitle": "AiGo’da senga shunday murojaat qilamiz.",
+      "placeholder": "Isming",
+      "photo": "Rasm qo‘shish",
+      "photoChange": "Rasmni almashtirish",
+      "photoRemove": "Rasmni olib tashlash",
+      "photoHint": "Majburiy emas. JPG yoki PNG mos keladi.",
+      "photoError": "Rasmni yuklab bo‘lmadi. Boshqa rasmni sinab ko‘r."
+    },
     "age": {
-      "title": "Yoshing nechada?",
-      "subtitle": "Til, misollar va topshiriqlarni yoshingga moslab tanlaymiz.",
-      "explorer": "Tadqiqotchi",
-      "explorerDesc": "O‘yinlar, hikoyalar va AI bilan oddiy tajribalar",
-      "creator": "Yaratuvchi",
-      "creatorDesc": "Haqiqiy vazifalar, loyihalar va ilk AI mahsulotlar"
-    },
-    "quiz": {
-      "title": "Kim yaxshiroq uddalaydi?",
-      "question": "Savol {current}/{total}",
-      "task": "Vazifa",
-      "correct": "To‘g‘ri! +10 XP",
-      "wrong": "Unchalik emas",
-      "next": "Keyingi savol",
-      "finish": "Keyingisi",
-      "questions": [
-        {
-          "task": "O‘yin qo‘llanmasini ingliz tilidan o‘zbek tiliga tarjima qilish",
-          "answer": "ai",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "tez va yetarlicha aniq"
-            },
-            {
-              "actor": "human",
-              "hint": "aniq, lekin sekin"
-            },
-            {
-              "actor": "together",
-              "hint": "AI tarjima qiladi — sen tekshirasan"
-            }
-          ],
-          "explanation": "Oddiy matnni AI o‘zi uddalaydi. Lekin xato qimmatga tushsa — birga tekshirgan yaxshi."
-        },
-        {
-          "task": "Maktab startapi uchun 30 ta nom o‘ylab topish va sinfdoshlarga yoqadiganini tanlash",
-          "answer": "together",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "tez, lekin sinfdoshlaringni tanimaydi"
-            },
-            {
-              "actor": "human",
-              "hint": "auditoriyani biladi, lekin sekin"
-            },
-            {
-              "actor": "together",
-              "hint": "AI yaratadi — sen tanlaysan"
-            }
-          ],
-          "explanation": "AI bir necha soniyada 30 ta variant beradi, sinfdoshlarga nima yoqishini esa sen bilasan."
-        },
-        {
-          "task": "O‘yinda yutqazib, xafa bo‘lgan do‘stni qo‘llab-quvvatlash",
-          "answer": "human",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "so‘zlarni taklif qiladi"
-            },
-            {
-              "actor": "human",
-              "hint": "sen yonidasan va uni tushunasan"
-            },
-            {
-              "actor": "together",
-              "hint": "AI maslahat beradi — sen gapirasan"
-            }
-          ],
-          "explanation": "Qo‘llab-quvvatlash samimiy bo‘lsa ishlaydi. Bu yerda mukammal matn emas, sen muhimsan."
-        },
-        {
-          "task": "5 000 qatorli baholar jadvalidan xatolarni topish",
-          "answer": "together",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "g‘alati qiymatlarni tez topadi"
-            },
-            {
-              "actor": "human",
-              "hint": "qo‘lda tekshiradi"
-            },
-            {
-              "actor": "together",
-              "hint": "AI topadi — sen tekshirasan"
-            }
-          ],
-          "explanation": "AI shubhali qatorlarni tez topadi, lekin qaysi biri haqiqiy xato ekanini inson hal qilishi kerak."
-        },
-        {
-          "task": "Maktab tanlovi uchun qaysi loyihani qilishni hal qilish",
-          "answer": "human",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "g‘oyalar taklif qiladi"
-            },
-            {
-              "actor": "human",
-              "hint": "senga nima qiziqligini o‘zing bilasan"
-            },
-            {
-              "actor": "together",
-              "hint": "AI taklif qiladi — sen hal qilasan"
-            }
-          ],
-          "explanation": "AI g‘oyalar taklif qilishi mumkin, lekin qaror va mas’uliyat — seniki."
-        }
-      ],
-      "correctNoXp": "To‘g‘ri! Bu savol uchun XP allaqachon olingan."
-    },
-    "check": {
-      "badge": "Fikrlashni tekshirish",
-      "title": "Sen qanday fikrlaysan?",
-      "subtitle": "5 ta qisqa topshiriq. Bu imtihon emas — shunday qilib qaysi darajadan boshlash senga qiziqroq ekanini bilamiz.",
-      "question": "Topshiriq {current}/{total}",
-      "correct": "To‘g‘ri! +10 XP",
-      "wrong": "Unchalik emas",
-      "next": "Keyingi topshiriq",
-      "finish": "Natijani ko‘rish",
-      "resultTitle": "Natijang: {total} tadan {score} ta",
-      "levelLabel": "Boshlang‘ich daraja",
-      "levels": {
-        "start": "Tadqiqotchi",
-        "middle": "Amaliyotchi",
-        "advanced": "Masalalar ustasi"
-      },
-      "levelText": {
-        "start": "Zo‘r boshlanish! Asoslardan boshlaymiz va topshiriqlarni asta-sekin murakkablashtiramiz.",
-        "middle": "Yaxshi natija! Ba’zi asoslarni allaqachon bilasan — qiyinroq topshiriqlar qo‘shamiz.",
-        "advanced": "Kuchli natija! Darhol ko‘proq Challenge darajasidagi topshiriqlar beramiz."
-      },
-      "strengths": "Kuchli tomonlaring",
-      "growth": "Nimani rivojlantiramiz",
-      "continue": "Keyingisi",
-      "skills": {
-        "critical": "Tanqidiy fikrlash",
-        "logic": "Mantiq",
-        "prompting": "AI’ga vazifa qo‘yish",
-        "problem": "Masala yechish"
-      },
-      "questions": [
-        {
-          "skill": "critical",
-          "text": "AI yozdi: «Dunyodagi eng baland tog‘ — Chimyon». Nima qilasan?",
-          "options": [
-            "Ishonaman — AI aqlli-ku",
-            "Ikkita ishonchli manbadan tekshiraman",
-            "AI’dan xuddi shu savolni yana so‘rayman",
-            "Javobni daftarimga ko‘chiraman"
-          ],
-          "answer": 1,
-          "explanation": "Eng baland tog‘ — Everest. AI javoblarini ishonchli manbalar bilan solishtirish kerak, o‘sha AI’dan qayta so‘rash hech narsani isbotlamaydi."
-        },
-        {
-          "skill": "logic",
-          "text": "Qatorni davom ettir: 2, 4, 8, 16, …",
-          "options": [
-            "18",
-            "24",
-            "32",
-            "20"
-          ],
-          "answer": 2,
-          "explanation": "Har bir son oldingisidan 2 marta katta: 16 × 2 = 32."
-        },
-        {
-          "skill": "prompting",
-          "text": "AI’ga qaysi so‘rov eng foydali natija beradi?",
-          "options": [
-            "Insho yoz",
-            "6-sinf uchun yoz haqida 150 so‘zli insho yoz, sodda tilda, hayotiy misol bilan",
-            "Insho!!! Tez!!!",
-            "Qiziqarli bir narsa qil"
-          ],
-          "answer": 1,
-          "explanation": "Yaxshi so‘rovda mavzu, hajm, auditoriya va uslub bo‘ladi. Vazifa qanchalik aniq bo‘lsa, javob shunchalik yaxshi."
-        },
-        {
-          "skill": "logic",
-          "text": "To‘garakdagi barcha robotlar sanashni biladi. Robot Bip to‘garakka qatnaydi. Nima aniq to‘g‘ri?",
-          "options": [
-            "Bip sanashni biladi",
-            "Bip rasm chizishni biladi",
-            "Sanashni biladiganlarning hammasi robot",
-            "Hech narsa deb bo‘lmaydi"
-          ],
-          "answer": 0,
-          "explanation": "To‘garakdagi barcha robotlar sanay olsa va Bip shu to‘garakdagi robot bo‘lsa, demak Bip sanashni biladi. Boshqasi shartdan kelib chiqmaydi."
-        },
-        {
-          "skill": "problem",
-          "text": "Maktab klubi uchun sayt yaratmoqchisan. Nimadan boshlagan ma’qul?",
-          "options": [
-            "Darhol kod yozishdan",
-            "Chiroyli rang tanlashdan",
-            "Sayt kimga va nima uchun kerakligini tushunishdan",
-            "Hammasini AI’ga topshirishdan"
-          ],
-          "answer": 2,
-          "explanation": "Avval vazifani tushunish kerak: sayt kim uchun va unda nima bo‘lishi kerak. Kod, dizayn va AI — keyingi qadamlar."
-        }
-      ],
-      "correctNoXp": "To‘g‘ri! Bu savol uchun XP allaqachon olingan."
-    },
-    "insight": {
-      "badge": "Eng muhimi",
-      "title": "AI vazifalarni o‘zgartiradi. Insonning qadri — u AI bilan nima qilishida",
-      "skills": "Sening ko‘nikmalaring",
-      "ai": "AI",
-      "result": "Yangi imkoniyatlar",
-      "points": [
-        {
-          "title": "AI xato qiladi",
-          "desc": "Shuning uchun uning javoblarini tekshira olish muhim."
-        },
-        {
-          "title": "AI sening maqsadingni bilmaydi",
-          "desc": "Vazifani qo‘yish va nima yaxshi ekanini hal qilish — sening ishing."
-        },
-        {
-          "title": "Vositalar har yili o‘zgaradi",
-          "desc": "Asosiy ko‘nikma — yangi narsani tez o‘zlashtirish."
-        }
-      ],
-      "cta": "O‘rganishga tayyorman"
+      "title": "{name}, yoshing nechada?",
+      "subtitle": "Topshiriqlarni yoshingga moslab tanlaymiz.",
+      "unit": "yosh"
     },
     "interests": {
-      "title": "Senga nima qiziq?",
-      "subtitle": "3 ta yoki undan ko‘pini tanla — topshiriq va loyihalarni qiziqishlaring atrofida yig‘amiz.",
-      "items": [
-        "O‘yinlar",
-        "Rasm chizish",
-        "Video va blog",
-        "Musiqa",
-        "Dasturlash",
-        "Biznes",
-        "Fan",
-        "Sport",
-        "Moda",
-        "Hayvonlar",
-        "Koinot",
-        "Foto"
-      ],
-      "more": "Yana {count} ta tanla",
+      "title": "Senga nima yoqadi?",
+      "subtitle": "Bitta yoki bir nechtasini tanla — topshiriqlar shu haqda bo‘ladi.",
       "cta": "Yo‘limni yig‘ish",
-      "example": "Sen uchun topshiriq namunasi: «AI bilan “{topic}” mavzusida loyiha g‘oyasini o‘ylab top va u faktlarda xato qilmaganini tekshir»"
+      "pickOne": "Kamida bittasini tanla"
+    },
+    "ready": {
+      "title": "{name}, yo‘ling tayyor!",
+      "subtitle": "Mana nimadan boshlaysan:",
+      "junior": "Yoshingga mos — Easy va Medium darajadagi topshiriqlar.",
+      "teen": "Sen uchun — barcha darajadagi topshiriqlar, Challenge ham bor.",
+      "start": "Birinchi darsni boshlash",
+      "later": "Avval kabinetga",
+      "tasks": "{count} ta topshiriq",
+      "forYou": "Qiziqishlaringga ko‘ra"
     }
   },
   "app": {
@@ -572,13 +351,13 @@
       "home": "Asosiy",
       "path": "Mening yo‘lim",
       "portfolio": "Portfolio",
-      "lesson": "Dars"
+      "lesson": "Dars",
+      "profile": "Profil"
     },
     "greeting": "Salom, {name}!",
     "level": "{level}-daraja · {title}",
     "xp": "{current} / {max} XP",
     "toLevel": "{title} darajasigacha",
-    "streak": "{days} kun ketma-ket",
     "module": "{n}-modul · {name}",
     "lessonTitle": "{n}-dars. {title}",
     "continue": "Davom etish",
@@ -586,9 +365,7 @@
     "challengeText": "15 daqiqada yangi AI vositasini o‘zlashtir va u bilan vazifani hal qil",
     "portfolio": "Portfolio",
     "portfolioCount": "loyiha",
-    "skills": "Mening ko‘nikmalarim",
     "interests": "Qiziqishlaring",
-    "reset": "Onboardingni qaytadan o‘tish",
     "path": {
       "title": "Mening yo‘lim",
       "subtitle": "12 ta modul: AI’ni tushunishdan o‘z AI mahsulotingacha.",
@@ -635,15 +412,39 @@
       "nextModule": "Keyingi modul",
       "lessonDone": "«{title}» darsi tugadi!",
       "moduleDone": "{module}-modul tugadi!",
-      "courseDoneTitle": "Barcha ochiq modullar tugadi!",
-      "courseDoneText": "Sen 1–3-modullarni tugatding. Yangi modullar tez orada ochiladi — hozircha «Mening yo‘lim» sahifasida istalgan darsni takrorlashing mumkin.",
+      "courseDoneTitle": "Butun yo‘l bosib o‘tildi!",
+      "courseDoneText": "Sen yo‘lingdagi barcha modullarni tugatding. Yangi modullar tez orada ochiladi — hozircha «Mening yo‘lim» sahifasida istalgan darsni takrorlashing yoki profilda yangi qiziqishlar qo‘shishing mumkin.",
       "toPath": "Mening yo‘lim",
       "howTitle": "AI Tutor qanday yordam beradi",
       "howNote": "Tayyor javob — faqat oxirida. Avval o‘zing o‘ylaysan."
     },
-    "demoName": "Aziz",
-    "startLevel": "Boshlang‘ich daraja: {level}",
-    "courseDone": "1–3-modullar tugadi 🎉"
+    "courseDone": "Yo‘l tugadi 🎉",
+    "friend": "do‘stim",
+    "progress": "Modullar bo‘yicha natija",
+    "editProfile": "Profilni tahrirlash",
+    "tasksOf": "{total} tadan {done}",
+    "forYou": "Qiziqishingga ko‘ra",
+    "profile": {
+      "title": "Mening profilim",
+      "subtitle": "Bu yerda ma’lumotlaring va yutuqlaring.",
+      "photo": "Rasm",
+      "change": "Rasmni almashtirish",
+      "add": "Rasm qo‘shish",
+      "remove": "Olib tashlash",
+      "name": "Ism",
+      "age": "Yosh",
+      "interests": "Qiziqishlar",
+      "xp": "XP",
+      "level": "Daraja",
+      "tasks": "Yechilgan topshiriqlar",
+      "modules": "Tugallangan modullar",
+      "progress": "Modullar bo‘yicha natija",
+      "saved": "O‘zgarishlar avtomatik saqlanadi",
+      "storageNote": "Natijalar shu brauzerda saqlanadi va vkladka yopilgandan keyin ham yo‘qolmaydi. Sayt ma’lumotlarini tozalasang yoki AiGo’ni boshqa qurilmada ochsang, ular ko‘chmaydi.",
+      "danger": "Qaytadan boshlash",
+      "reset": "Barcha natijalarni o‘chirish",
+      "resetConfirm": "Profil, XP va barcha bajarilgan topshiriqlarni rostdan ham o‘chirasanmi? Buni qaytarib bo‘lmaydi."
+    }
   },
   "course": {
     "modules": [
@@ -977,6 +778,456 @@
           }
         ]
       }
-    ]
+    ],
+    "tracks": {
+      "games": {
+        "name": "O‘yinlar va texnologiyalar",
+        "desc": "AI qahramonlarni qanday boshqaradi va o‘yin yaratishga yordam beradi",
+        "lessons": [
+          {
+            "title": "AI qanday o‘ynaydi",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "O‘yindagi dushmanlar to‘siqlarni o‘zi aylanib o‘tib, seni qidiradi. Ularni kim boshqaradi?",
+                "options": [
+                  "Onlayndagi boshqa o‘yinchi",
+                  "O‘yin AI’si — harakatlarni tanlaydigan dastur",
+                  "Tasodif",
+                  "Pristavka o‘zi o‘ylaydi"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Yolg‘iz o‘ynaganingda ham dushmanlar birdek aqlli harakat qiladi.",
+                  "O‘yin ichida dushman qayerga borishini hal qiladigan dastur bor."
+                ],
+                "explanation": "Dushmanlarni o‘yin AI’si boshqaradi: qoidalar asosida qayerga borish va nima qilishni tanlaydigan dastur. Shuning uchun yolg‘iz o‘ynaganingda ham ular «aqlli» ko‘rinadi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI bosqichni o‘tishni o‘rgandi: minglab marta urinib, muvaffaqiyat uchun ochko oldi. Bu nima deb ataladi?",
+                "options": [
+                  "Mustahkamlash orqali o‘rganish",
+                  "Ko‘chirish",
+                  "O‘yinni buzish",
+                  "Omad"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Itni qanday o‘rgatishlarini esla: to‘g‘ri harakat uchun mukofot.",
+                  "Nomida mukofot va rag‘batga oid so‘z bor."
+                ],
+                "explanation": "Bu mustahkamlash orqali o‘rganish: AI turli harakatlarni sinaydi va yaxshilari uchun «mukofot» oladi. Vaqt o‘tib, ko‘proq ochko keltiradiganini tanlaydi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "O‘yindagi AI raqib doim yutadi va o‘ynash zerikarli. Dasturchi nima qilgani ma’qul?",
+                "options": [
+                  "AI’ni o‘yindan olib tashlash",
+                  "AI’ni yanada kuchli qilish",
+                  "Qiyinlikni o‘yinchi darajasiga moslash",
+                  "Yutqazishni taqiqlash"
+                ],
+                "answer": 2,
+                "hints": [
+                  "G‘alaba mumkin, lekin juda oson bo‘lmasa, o‘yin qiziq bo‘ladi.",
+                  "Yaxshi o‘yinlar o‘ynayotgan odamga moslashadi."
+                ],
+                "explanation": "Eng yaxshi o‘yinlar qiyinlikni o‘yinchiga moslaydi: yangi boshlovchiga osonroq, tajribaliga qiyinroq. AI’ni yengilmas emas, qiziqarli raqib qilib sozlash mumkin."
+              }
+            ]
+          },
+          {
+            "title": "AI bilan o‘yin yaratamiz",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI bilan o‘yin qahramonini o‘ylab topyapsan. Qaysi so‘rov yaxshiroq?",
+                "options": [
+                  "«Qahramon»",
+                  "«Oshxona haqidagi o‘yin uchun mehribon robot-oshpaz o‘ylab top: ismi, fe’li va bitta super kuchi»",
+                  "«Zo‘r qil»",
+                  "«O‘yin»"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Sen aytmaguningcha AI o‘yining qanday ekanini bilmaydi.",
+                  "Eng yaxshi so‘rov qahramon kimligini va nimani o‘ylab topish kerakligini aytadi."
+                ],
+                "explanation": "So‘rov qanchalik batafsil bo‘lsa, natija shunchalik qiziq: o‘yin mavzusi, fe’l-atvor va aynan nimani o‘ylab topish kerakligi. Keyin g‘oyani sen tanlab, rivojlantirasan."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI o‘yining qoidalarini yozdi, lekin ularda qarama-qarshilik bor. Nima qilish kerak?",
+                "options": [
+                  "Shundayligicha qoldirish",
+                  "Barcha qoidalarni o‘chirish",
+                  "O‘yindan voz kechish",
+                  "AI’dan qarama-qarshilikni topib tuzatishni so‘rab, keyin o‘zing tekshirish"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Xatoni tuzatish mumkin, butun ishni tashlash shart emas.",
+                  "AI tuzatishga yordam beradi, lekin natijani sen tekshirishing kerak."
+                ],
+                "explanation": "AI o‘yin qoidalarida ham xato qilishi mumkin. Undan qarama-qarshilikni topishni so‘ra, lekin natijani doim o‘zing tekshir — masalan, do‘stlar bilan sinov raundi o‘ynab ko‘r."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI yordamida o‘yin yaratyapsan. Ishni qaysi tartibda qilgan yaxshi?",
+                "options": [
+                  "G‘oya → qoidalar → oddiy prototip → do‘stlar bilan sinov → yaxshilash",
+                  "Avval chiroyli grafika, g‘oya keyin",
+                  "Hammasini AI’ga topshirish",
+                  "O‘yinni sinovsiz chiqarish"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Avval nima o‘ynalishini tushunish kerak.",
+                  "Bu tartibning qaysi qadamida odamlarga qiziqligini bilasan?"
+                ],
+                "explanation": "Haqiqiy dasturchilar shunday ishlaydi: g‘oya, qoidalar, tezkor prototip, sinov va yaxshilash. AI har qadamda yordam beradi, lekin qarorni sen qabul qilasan."
+              }
+            ]
+          }
+        ]
+      },
+      "creative": {
+        "name": "Ijodkorlik",
+        "desc": "AI bilan rasm, musiqa, video va hikoyalar",
+        "lessons": [
+          {
+            "title": "AI va ijodkorlik",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI sen tasvirlagan rasmni chizdi. G‘oyani kim o‘ylab topdi?",
+                "options": [
+                  "Faqat AI",
+                  "Sen — AI esa chizishga yordam berdi",
+                  "Hech kim",
+                  "Internet"
+                ],
+                "answer": 1,
+                "hints": [
+                  "AI aynan nimani chizishni qayerdan bildi?",
+                  "Sening tavsifingsiz rasm bo‘lmasdi."
+                ],
+                "explanation": "G‘oya — seniki: nimani ko‘rmoqchi ekaningni sen tasvirlading. AI esa mo‘yqalam yoki qalam kabi vosita bo‘ldi, faqat juda tez."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI chizgan rasmni tasavvuringdagiga qanday yaqinlashtirish mumkin?",
+                "options": [
+                  "Bitta so‘z yozish",
+                  "Tugmani ko‘p marta bosish",
+                  "Uslub, ranglar, kayfiyat va tafsilotlarni tasvirlash",
+                  "Katta harflar bilan yozish"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI sening boshingdagi rasmni ko‘rmaydi.",
+                  "Qancha ko‘p tafsilot yozsang, natija shuncha aniq bo‘ladi."
+                ],
+                "explanation": "AI tavsifdan nimani tushungan bo‘lsa, shuni chizadi. Uslub (multfilm, akvarel), ranglar, kayfiyat va tafsilotlar g‘oyangga mos kelishiga yordam beradi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Rasm tanlovi uchun AI yordamida rasm tayyorlading. Qanday qilish halol bo‘ladi?",
+                "options": [
+                  "AI ishlatganingni aytib, o‘zing nima qilganingni tushuntirish",
+                  "Ishni butunlay o‘zingniki deb ko‘rsatish",
+                  "Hech kimga hech narsa demaslik",
+                  "Ranglarni biroz o‘zgartirib, aytmaslik"
+                ],
+                "answer": 0,
+                "hints": [
+                  "O‘zi chizganlarga nisbatan bu adolatlimi — o‘ylab ko‘r.",
+                  "Halollik — qaysi hissa seniki, qaysi biri AI’niki ekanini aytish."
+                ],
+                "explanation": "Halol yo‘l — AI ishlatganingni aytish va o‘z hissangni tushuntirish: g‘oya, tavsif, tahrir. Ko‘p tanlovlarda buning uchun alohida qoidalar bor."
+              }
+            ]
+          },
+          {
+            "title": "Musiqa, video va hikoyalar",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI kuy o‘ylab topishga yordam berdi. Senga qanday vazifa qoladi?",
+                "options": [
+                  "Hech narsa",
+                  "Faqat «Ijro» tugmasini bosish",
+                  "Musiqani o‘chirish",
+                  "Yaxshi yangraganini tanlab, o‘z g‘oyalaringni qo‘shish"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Kuy senga yoqish-yoqmasligini kim hal qiladi?",
+                  "AI variant taklif qiladi — tanlaydigan va yaxshilaydigan esa inson."
+                ],
+                "explanation": "AI kuylar taklif qilishi mumkin, lekin did — seniki. Eng yaxshisini tanlaysan, o‘zgartirasan, g‘oyalaringni qo‘shasan — shunda musiqa seniki bo‘ladi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Blog uchun video suratga olyapsan. AI qayerda eng ko‘p yordam beradi?",
+                "options": [
+                  "Hikoyani sen uchun yashaydi",
+                  "Subtitrlar tayyorlaydi va nom uchun g‘oyalar beradi",
+                  "Kadrda seni almashtiradi",
+                  "Tomoshabinlar o‘rniga videoni ko‘radi"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Tomoshabinlarga sen qiziqsan — yordamchiga nimani topshirish mumkin?",
+                  "Zerikarli, lekin foydali ish haqida o‘ylab ko‘r."
+                ],
+                "explanation": "AI odatiy ishlarni yaxshi bajaradi: subtitrlar, nom g‘oyalari, montaj bo‘yicha maslahatlar. Hikoya, his-tuyg‘u va shaxsiyat esa aynan seni ko‘rishlari sababi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI video ssenariysini yozdi, lekin u «senga o‘xshamaydi». Eng yaxshi qadam qaysi?",
+                "options": [
+                  "Shundayligicha e’lon qilish",
+                  "Videodan voz kechish",
+                  "AI’ga o‘z iboralaringdan misollar berib, uslubingda qayta yozishni so‘rash va o‘zing tahrirlash",
+                  "Do‘stingdan sen o‘rniga ovoz berishni so‘rash"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI odatda qanday gapirishingni bilmaydi.",
+                  "AI’ga uslubingni ko‘rsat, yakuniy variantni esa o‘zing qil."
+                ],
+                "explanation": "Misollar ko‘rsatsang, AI’ni uslubingga «sozlash» mumkin. Lekin oxirgi so‘z seniki: matn tabiiy yangrashi uchun uni tahrirla."
+              }
+            ]
+          }
+        ]
+      },
+      "science": {
+        "name": "Fan va tabiat",
+        "desc": "AI yordamida koinot, hayvonlar va tajribalar",
+        "lessons": [
+          {
+            "title": "Fanda AI",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Olimlar teleskop suratlaridan yangi sayyoralarni topish uchun AI’dan foydalanadi. AI nimasi bilan foydali?",
+                "options": [
+                  "Millionlab suratlarni tez ko‘rib chiqadi",
+                  "Koinotga uchadi",
+                  "Sayyoralarni o‘ylab topadi",
+                  "Teleskopni almashtiradi"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Suratlar shunchalik ko‘pki, ularni ko‘rib chiqishga insonning umri yetmaydi.",
+                  "Katta hajmdagi ma’lumotni tez qayta ishlash kerak bo‘lganda AI kuchli."
+                ],
+                "explanation": "AI millionlab suratlar orasidan sayyora bo‘lishi mumkin bo‘lgan narsani tez topadi. Olimlar esa keyin eng qiziq topilmalarni tekshiradi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI suratdan qush turini aniqladi. U haqmi-yo‘qmi, qanday tekshirasan?",
+                "options": [
+                  "Darhol ishonish",
+                  "Qushlar atlasi bilan solishtirish yoki mutaxassisdan so‘rash",
+                  "AI’dan yana so‘rash",
+                  "Boshqa qushni suratga olish"
+                ],
+                "answer": 1,
+                "hints": [
+                  "O‘sha AI emas, mustaqil manba kerak.",
+                  "Qushlarning tekshirilgan tavsiflari qayerda to‘plangan?"
+                ],
+                "explanation": "AI o‘xshash turlarni adashtirishi mumkin. Ishonchlisi — atlas yoki ensiklopediya bilan solishtirish yoki ornitologdan so‘rash. Haqiqiy olimlar ham shunday qiladi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI ob-havo prognozi: «Ertaga 80% ehtimol bilan yomg‘ir». Bu nimani anglatadi?",
+                "options": [
+                  "Yomg‘ir albatta yog‘adi",
+                  "Yomg‘ir albatta yog‘maydi",
+                  "Yomg‘ir ehtimoli juda yuqori, lekin kafolat yo‘q",
+                  "AI buzilgan"
+                ],
+                "answer": 2,
+                "hints": [
+                  "80% — bu 100% emas.",
+                  "10 ta o‘xshash kunni tasavvur qil: ularning nechtasida yomg‘ir yog‘adi?"
+                ],
+                "explanation": "80% ehtimol shuni anglatadi: 10 ta o‘xshash kunning taxminan 8 tasida yomg‘ir yoqqan. Ehtimol yog‘adi — soyabon olgan ma’qul — lekin kafolat yo‘q. AI aniq kelajakni emas, imkoniyatlarni aytadi."
+              }
+            ]
+          },
+          {
+            "title": "AI bilan tabiatni o‘rganamiz",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Kuzda barglar nega sarg‘ayishini bilmoqchisan. AI’dan qanday so‘ragan yaxshi?",
+                "options": [
+                  "«Barglar»",
+                  "«Kuz»",
+                  "«Sariq»",
+                  "«Kuzda barglar nega sarg‘ayishini sodda so‘zlar bilan tushuntirib, misol keltir»"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Bitta so‘z — savol emas.",
+                  "Yaxshi savol nimani bilmoqchi ekaningni va qanday tushuntirishni aytadi."
+                ],
+                "explanation": "Sodda tushuntirishni so‘ragan to‘liq savol tushunarli javob beradi. Qisqasi: kuzda barglardagi yashil xlorofill parchalanadi va sariq pigmentlar ko‘rinib qoladi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI ma’ruzangga shunday yozdi: «Kitlar — katta baliqlar». Nima qilasan?",
+                "options": [
+                  "Ishonaman — AI biladi",
+                  "Tekshiraman: kitlar sutemizuvchilar, demak AI xato qildi",
+                  "Ma’ruzaga shundayligicha ko‘chiraman",
+                  "AI’dan «rostmi?» deb so‘rab, javobga ishonaman"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Esla: kitlar qanday nafas oladi va bolalarini nima bilan boqadi?",
+                  "Kitlar havodan nafas oladi va bolalarini sut bilan boqadi."
+                ],
+                "explanation": "Kitlar sutemizuvchilar: ular havodan nafas oladi va bolalarini sut bilan boqadi. AI xato qildi, shuning uchun ma’ruza uchun faktlarni doim darslik yoki ensiklopediyadan tekshirish kerak."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Daryo suvining tozaligi haqida maktab loyihasini qilyapsan. AI’dan qanday to‘g‘ri foydalanish kerak?",
+                "options": [
+                  "O‘z ma’lumotlaringni yig‘ib, AI’dan ularni tahlil qilish va rasmiylashtirishda yordam so‘rash",
+                  "AI’dan o‘lchov natijalarini o‘ylab topishni so‘rash",
+                  "Birovning loyihasini ko‘chirish",
+                  "Hech narsani tekshirmaslik"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Ilmiy loyiha haqiqiy ma’lumotlarga asoslanadi.",
+                  "AI tahlilda yordam berishi mumkin, lekin faktlarni to‘qib chiqarmasligi kerak."
+                ],
+                "explanation": "Haqiqiy fan — haqiqiy ma’lumotlar. O‘z o‘lchovlaringni qil, AI’dan esa grafik tuzish, qonuniyatlarni topish va xulosalarni chiroyli rasmiylashtirish uchun foydalan."
+              }
+            ]
+          }
+        ]
+      },
+      "sport": {
+        "name": "Sport va salomatlik",
+        "desc": "Aqlli soatlar, o‘yin tahlili va AI bilan mashg‘ulotlar",
+        "lessons": [
+          {
+            "title": "Sportda AI",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Aqlli soat qadamlaring va pulsingni hisoblaydi. AI bu ma’lumotlar bilan nima qiladi?",
+                "options": [
+                  "Qonuniyatlarni topib, maslahat beradi",
+                  "Sen uchun yuguradi",
+                  "Ma’lumotlarni o‘chiradi",
+                  "Hech narsa"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Soatga sen haqingda shuncha raqam nimaga kerak?",
+                  "Masalan, soat bugun kam harakat qilganingni payqashi mumkin."
+                ],
+                "explanation": "AI ma’lumotlarda qonuniyatlarni topadi: qancha harakat qilasan, qanday uxlaysan, puls qanday o‘zgaradi — va nimani yaxshilash mumkinligini aytadi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "Futbol klubi o‘yinlarni AI yordamida tahlil qiladi. AI nimani topa oladi?",
+                "options": [
+                  "10 yildan keyin kim yutishini",
+                  "Qaysi o‘yinchi to‘pni ko‘proq va maydonning qaysi qismida yo‘qotishini",
+                  "Mashg‘ulotsiz qanday gol urishni",
+                  "Jamoadagi eng yaqin do‘st kimligini"
+                ],
+                "answer": 1,
+                "hints": [
+                  "AI o‘yinlarda allaqachon sodir bo‘lgan narsani tahlil qiladi.",
+                  "O‘yin yozuvlaridan hisoblash mumkin bo‘lgan javobni izla."
+                ],
+                "explanation": "AI o‘yin yozuvlarida qonuniyatlarni topadi: to‘p qayerda yo‘qotiladi, gollar qayerdan uriladi. Bu murabbiyga yordam beradi, lekin kelajak va do‘stlikni AI hisoblay olmaydi."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI murabbiy 12 yoshli bolaga har kuni 5 soat mashq qilishni maslahat bermoqda. Nima qilish kerak?",
+                "options": [
+                  "AI’ga bo‘ysunish — axir u murabbiy",
+                  "Katta murabbiy yoki shifokor bilan maslahatlashish — AI yoshni hisobga olmagan bo‘lishi mumkin",
+                  "Yanada ko‘proq mashq qilish",
+                  "Sportni tashlash"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Bunday rejim hatto katta sportchilar uchun ham og‘ir.",
+                  "Gap salomatlik haqida ketganda, oxirgi so‘z katta mutaxassisda."
+                ],
+                "explanation": "AI, ayniqsa yoshing va salomatligingni bilmasa, mos bo‘lmagan maslahat berishi mumkin. Salomatlik masalalarida doim murabbiy, shifokor yoki ota-onang bilan maslahatlash."
+              }
+            ]
+          },
+          {
+            "title": "AI bilan mashq qil",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Qaysi so‘rov foydali badantarbiya rejasini beradi?",
+                "options": [
+                  "«Badantarbiya»",
+                  "«Sport!!!»",
+                  "«6-sinf o‘quvchisi uchun futboldan oldin 10 daqiqalik badantarbiya tuz»",
+                  "«Meni kuchli qil»"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI badantarbiya qaysi sport va kim uchunligini bilishi kerak.",
+                  "Vaqt, sport turi va yosh ko‘rsatilgan so‘rovni top."
+                ],
+                "explanation": "Yaxshi so‘rovda vaqt, sport turi va yosh bo‘ladi. Shunda badantarbiya aynan senga mos va xavfsiz bo‘ladi."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI ilova 10 daqiqada 50 km yugurganingni ko‘rsatdi. Nima noto‘g‘ri?",
+                "options": [
+                  "Hammasi to‘g‘ri",
+                  "Bunchalik tez yugurib bo‘lmaydi — ma’lumot xato, datchikni tekshirish kerak",
+                  "Sen jahon rekordini yangilading",
+                  "Shunchaki soat yangi"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Mashina bilan solishtir: u shaharda 10 daqiqada qancha yuradi?",
+                  "Natija imkonsiz bo‘lsa, xato ma’lumotda."
+                ],
+                "explanation": "10 daqiqada 50 km — bu trassadagi mashina tezligi. AI datchikning noto‘g‘ri ma’lumotlari asosida hisoblagan. Natija imkonsiz ko‘rinsa — ma’lumotni tekshir."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "Jamoa o‘yin taktikasini AI yordamida tanlamoqchi. Qarorni kim qabul qiladi?",
+                "options": [
+                  "AI — u aqlliroq",
+                  "Raqiblar",
+                  "Hech kim",
+                  "Murabbiy va jamoa, AI esa g‘oya va statistika beradi"
+                ],
+                "answer": 3,
+                "hints": [
+                  "AI jamoaning kayfiyatini va bugun kim yaxshi formada ekanini bilmaydi.",
+                  "AI — yordamchi, qaror uchun esa inson javob beradi."
+                ],
+                "explanation": "AI statistikani yaxshi hisoblaydi va variantlar taklif qiladi, lekin qarorni murabbiy va o‘yinchilar qabul qiladi: ular jamoani, raqibni va maydondagi vaziyatni biladi."
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

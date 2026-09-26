@@ -314,257 +314,36 @@
     "step": "Step {current} of {total}",
     "next": "Next",
     "back": "Back",
+    "name": {
+      "title": "Hi! What’s your name?",
+      "subtitle": "That’s how AiGo will call you.",
+      "placeholder": "Your name",
+      "photo": "Add a photo",
+      "photoChange": "Change photo",
+      "photoRemove": "Remove photo",
+      "photoHint": "Optional. JPG or PNG works.",
+      "photoError": "Couldn’t load the photo. Try another image."
+    },
     "age": {
-      "title": "How old are you?",
-      "subtitle": "We’ll match the language, examples and tasks to your age.",
-      "explorer": "Explorer",
-      "explorerDesc": "Games, stories and simple AI experiments",
-      "creator": "Creator",
-      "creatorDesc": "Real tasks, projects and your first AI products"
-    },
-    "quiz": {
-      "title": "Who does it better?",
-      "question": "Question {current} of {total}",
-      "task": "Task",
-      "correct": "Correct! +10 XP",
-      "wrong": "Not quite",
-      "next": "Next question",
-      "finish": "Next",
-      "questions": [
-        {
-          "task": "Translate game instructions from English into another language",
-          "answer": "ai",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "fast and accurate enough"
-            },
-            {
-              "actor": "human",
-              "hint": "accurate, but slow"
-            },
-            {
-              "actor": "together",
-              "hint": "AI translates — you check"
-            }
-          ],
-          "explanation": "AI can handle a simple text on its own. But if a mistake is costly, it’s better to check together."
-        },
-        {
-          "task": "Come up with 30 names for a school startup and pick the one your classmates will like",
-          "answer": "together",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "fast, but doesn’t know your classmates"
-            },
-            {
-              "actor": "human",
-              "hint": "knows the audience, but slow"
-            },
-            {
-              "actor": "together",
-              "hint": "AI generates — you choose"
-            }
-          ],
-          "explanation": "AI gives you 30 options in seconds, and you know what your classmates will like."
-        },
-        {
-          "task": "Support a friend who is upset after losing a game",
-          "answer": "human",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "can suggest words"
-            },
-            {
-              "actor": "human",
-              "hint": "you’re there and you understand"
-            },
-            {
-              "actor": "together",
-              "hint": "AI suggests — you speak"
-            }
-          ],
-          "explanation": "Support works when it’s real. What matters here is you, not a perfect text."
-        },
-        {
-          "task": "Find mistakes in a 5,000-row table of grades",
-          "answer": "together",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "quickly spots odd values"
-            },
-            {
-              "actor": "human",
-              "hint": "checks by hand"
-            },
-            {
-              "actor": "together",
-              "hint": "AI finds — you check"
-            }
-          ],
-          "explanation": "AI quickly finds suspicious rows, but a person should decide which ones are real mistakes."
-        },
-        {
-          "task": "Decide which project to do for a school contest",
-          "answer": "human",
-          "options": [
-            {
-              "actor": "ai",
-              "hint": "suggests ideas"
-            },
-            {
-              "actor": "human",
-              "hint": "you know what interests you"
-            },
-            {
-              "actor": "together",
-              "hint": "AI suggests — you decide"
-            }
-          ],
-          "explanation": "AI can suggest ideas, but the decision and the responsibility are yours."
-        }
-      ],
-      "correctNoXp": "Correct! You already got XP for this question."
-    },
-    "check": {
-      "badge": "Thinking check",
-      "title": "How do you think?",
-      "subtitle": "5 short tasks. It’s not a test — it helps us find the right level for you to start.",
-      "question": "Task {current} of {total}",
-      "correct": "Correct! +10 XP",
-      "wrong": "Not quite",
-      "next": "Next task",
-      "finish": "See my result",
-      "resultTitle": "Your result: {score} of {total}",
-      "levelLabel": "Starting level",
-      "levels": {
-        "start": "Explorer",
-        "middle": "Practitioner",
-        "advanced": "Problem Master"
-      },
-      "levelText": {
-        "start": "Great start! We’ll begin with the basics and make tasks harder step by step.",
-        "middle": "Good result! You already know some basics — we’ll add harder tasks.",
-        "advanced": "Strong result! We’ll give you more Challenge-level tasks right away."
-      },
-      "strengths": "Your strengths",
-      "growth": "What we’ll level up",
-      "continue": "Next",
-      "skills": {
-        "critical": "Critical thinking",
-        "logic": "Logic",
-        "prompting": "Giving AI clear tasks",
-        "problem": "Problem solving"
-      },
-      "questions": [
-        {
-          "skill": "critical",
-          "text": "AI wrote: “The highest mountain in the world is Mont Blanc.” What will you do?",
-          "options": [
-            "Believe it — AI is smart",
-            "Check two reliable sources",
-            "Ask AI the same question again",
-            "Copy the answer into my notebook"
-          ],
-          "answer": 1,
-          "explanation": "The highest mountain is Everest. AI answers need checking against reliable sources — asking the same AI again proves nothing."
-        },
-        {
-          "skill": "logic",
-          "text": "Continue the sequence: 2, 4, 8, 16, …",
-          "options": [
-            "18",
-            "24",
-            "32",
-            "20"
-          ],
-          "answer": 2,
-          "explanation": "Each number is twice the previous one: 16 × 2 = 32."
-        },
-        {
-          "skill": "prompting",
-          "text": "Which request to AI will give the most useful result?",
-          "options": [
-            "Write an essay",
-            "Write a 150-word essay about summer for 6th graders, in simple language, with a real-life example",
-            "Essay!!! Fast!!!",
-            "Do something interesting"
-          ],
-          "answer": 1,
-          "explanation": "A good request includes the topic, length, audience and style. The clearer the task, the better the answer."
-        },
-        {
-          "skill": "logic",
-          "text": "All robots in the club can count. Robot Beep goes to the club. What is definitely true?",
-          "options": [
-            "Beep can count",
-            "Beep can draw",
-            "Everyone who can count is a robot",
-            "We can’t say anything"
-          ],
-          "answer": 0,
-          "explanation": "If every robot in the club can count and Beep is a robot from the club, then Beep can count. Nothing else follows."
-        },
-        {
-          "skill": "problem",
-          "text": "You want to make a website for your school club. Where should you start?",
-          "options": [
-            "Start writing code",
-            "Pick a nice color",
-            "Figure out who the site is for and why",
-            "Ask AI to do everything"
-          ],
-          "answer": 2,
-          "explanation": "First understand the problem: who the site is for and what it needs. Code, design and AI come next."
-        }
-      ],
-      "correctNoXp": "Correct! You already got XP for this question."
-    },
-    "insight": {
-      "badge": "Key idea",
-      "title": "AI changes tasks. A person’s value is in what they do with it",
-      "skills": "Your skills",
-      "ai": "AI",
-      "result": "New possibilities",
-      "points": [
-        {
-          "title": "AI makes mistakes",
-          "desc": "That’s why checking its answers matters."
-        },
-        {
-          "title": "AI doesn’t know your goal",
-          "desc": "You set the task and decide what’s good."
-        },
-        {
-          "title": "Tools change every year",
-          "desc": "The key skill is learning new things fast."
-        }
-      ],
-      "cta": "I’m ready to learn"
+      "title": "{name}, how old are you?",
+      "subtitle": "We’ll pick tasks for your age.",
+      "unit": "years"
     },
     "interests": {
-      "title": "What are you into?",
-      "subtitle": "Pick 3 or more — we’ll build tasks and projects around your interests.",
-      "items": [
-        "Games",
-        "Drawing",
-        "Video & blogging",
-        "Music",
-        "Coding",
-        "Business",
-        "Science",
-        "Sports",
-        "Fashion",
-        "Animals",
-        "Space",
-        "Photography"
-      ],
-      "more": "Pick {count} more",
+      "title": "What do you like?",
+      "subtitle": "Pick one or more — your tasks will be about it.",
       "cta": "Build my path",
-      "example": "A task for you: “Use AI to come up with a project idea about {topic} and check whether it got any facts wrong”"
+      "pickOne": "Pick at least one"
+    },
+    "ready": {
+      "title": "{name}, your path is ready!",
+      "subtitle": "Here’s where you’ll start:",
+      "junior": "For your age — Easy and Medium tasks.",
+      "teen": "For you — tasks of every level, including Challenge.",
+      "start": "Start the first lesson",
+      "later": "Go to my dashboard first",
+      "tasks": "{count, plural, one {# task} other {# tasks}}",
+      "forYou": "Based on your interests"
     }
   },
   "app": {
@@ -572,13 +351,13 @@
       "home": "Home",
       "path": "My path",
       "portfolio": "Portfolio",
-      "lesson": "Lesson"
+      "lesson": "Lesson",
+      "profile": "Profile"
     },
     "greeting": "Hi, {name}!",
     "level": "Level {level} · {title}",
     "xp": "{current} / {max} XP",
     "toLevel": "to {title}",
-    "streak": "{days, plural, one {# day} other {# days}} in a row",
     "module": "Module {n} · {name}",
     "lessonTitle": "Lesson {n}. {title}",
     "continue": "Continue",
@@ -586,9 +365,7 @@
     "challengeText": "Learn a new AI tool in 15 minutes and solve a task with it",
     "portfolio": "Portfolio",
     "portfolioCount": "{count, plural, one {project} other {projects}}",
-    "skills": "My skills",
     "interests": "Your interests",
-    "reset": "Redo onboarding",
     "path": {
       "title": "My path",
       "subtitle": "12 modules: from understanding AI to your own AI product.",
@@ -635,15 +412,39 @@
       "nextModule": "Next module",
       "lessonDone": "Lesson “{title}” complete!",
       "moduleDone": "Module {module} complete!",
-      "courseDoneTitle": "All available modules complete!",
-      "courseDoneText": "You finished modules 1–3. New modules are coming soon — meanwhile you can replay any lesson on the “My path” page.",
+      "courseDoneTitle": "Your whole path is complete!",
+      "courseDoneText": "You finished every module on your path. New modules are coming soon — meanwhile you can replay any lesson on “My path” or add new interests in your profile.",
       "toPath": "My path",
       "howTitle": "How AI Tutor helps",
       "howNote": "The answer comes last. First, you think."
     },
-    "demoName": "Alex",
-    "startLevel": "Starting level: {level}",
-    "courseDone": "Modules 1–3 complete 🎉"
+    "courseDone": "Path complete 🎉",
+    "friend": "friend",
+    "progress": "Progress by module",
+    "editProfile": "Edit profile",
+    "tasksOf": "{done} of {total}",
+    "forYou": "For you",
+    "profile": {
+      "title": "My profile",
+      "subtitle": "Your details and achievements.",
+      "photo": "Photo",
+      "change": "Change photo",
+      "add": "Add a photo",
+      "remove": "Remove",
+      "name": "Name",
+      "age": "Age",
+      "interests": "Interests",
+      "xp": "XP",
+      "level": "Level",
+      "tasks": "Tasks solved",
+      "modules": "Modules completed",
+      "progress": "Progress by module",
+      "saved": "Changes are saved automatically",
+      "storageNote": "Progress is stored in this browser and stays after you close the tab. If you clear site data or open AiGo on another device, it won’t carry over.",
+      "danger": "Start over",
+      "reset": "Reset all progress",
+      "resetConfirm": "Really reset your profile, XP and all completed tasks? This can’t be undone."
+    }
   },
   "course": {
     "modules": [
@@ -977,6 +778,456 @@
           }
         ]
       }
-    ]
+    ],
+    "tracks": {
+      "games": {
+        "name": "Games & tech",
+        "desc": "How AI controls characters and helps make games",
+        "lessons": [
+          {
+            "title": "How AI plays games",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Enemies in a game walk around obstacles and look for you. Who controls them?",
+                "options": [
+                  "Another player online",
+                  "Game AI — a program that chooses actions",
+                  "Pure chance",
+                  "The console thinks by itself"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Enemies act just as smart even when you play alone.",
+                  "There’s a program inside the game that decides where an enemy goes."
+                ],
+                "explanation": "Enemies are controlled by game AI: a program that follows rules to choose where to go and what to do. That’s why enemies seem “smart” even when you play alone."
+              },
+              {
+                "difficulty": "medium",
+                "question": "An AI learned to beat a level: it tried thousands of times and got points for success. What is this called?",
+                "options": [
+                  "Reinforcement learning",
+                  "Copying",
+                  "Hacking the game",
+                  "Luck"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Think about how a dog is trained: a reward for the right action.",
+                  "The name includes a word about rewards and support."
+                ],
+                "explanation": "This is reinforcement learning: AI tries different actions and gets a “reward” for good ones. Over time it picks what earns more points."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "The AI opponent always wins and the game gets boring. What should the developer do?",
+                "options": [
+                  "Remove the AI from the game",
+                  "Make the AI even stronger",
+                  "Adjust the difficulty to the player’s level",
+                  "Ban losing"
+                ],
+                "answer": 2,
+                "hints": [
+                  "A game is fun when winning is possible but not too easy.",
+                  "Good games adapt to whoever is playing."
+                ],
+                "explanation": "The best games adjust difficulty to the player: easier for beginners, harder for pros. AI can be tuned to be a fun opponent rather than an unbeatable one."
+              }
+            ]
+          },
+          {
+            "title": "Making a game with AI",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "You’re creating a game character with AI. Which request is better?",
+                "options": [
+                  "“Character”",
+                  "“Invent a kind robot chef for a kitchen game: name, personality and one superpower”",
+                  "“Make it cool”",
+                  "“Game”"
+                ],
+                "answer": 1,
+                "hints": [
+                  "AI doesn’t know your game until you tell it.",
+                  "The best request says who the character is and what to come up with."
+                ],
+                "explanation": "The more detailed the request, the more interesting the result: the game’s theme, the personality and exactly what to invent. Then you pick and polish the idea."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI wrote the rules for your game, but they contradict each other. What should you do?",
+                "options": [
+                  "Leave them as they are",
+                  "Delete all the rules",
+                  "Give up on the game",
+                  "Ask AI to find and fix the contradiction, then check it yourself"
+                ],
+                "answer": 3,
+                "hints": [
+                  "A mistake can be fixed — no need to drop all the work.",
+                  "AI can help fix it, but you should check the result."
+                ],
+                "explanation": "AI can make mistakes in game rules too. Ask it to find the contradiction, but always check the result yourself — for example, play a test round with friends."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "You’re making a game with AI. Which order of work is best?",
+                "options": [
+                  "Idea → rules → simple prototype → test with friends → improve",
+                  "Beautiful graphics first, idea later",
+                  "Ask AI to do everything for you",
+                  "Release the game without testing"
+                ],
+                "answer": 0,
+                "hints": [
+                  "First you need to know what the game even is.",
+                  "At which step do you find out whether people enjoy it?"
+                ],
+                "explanation": "That’s how real developers work: idea, rules, quick prototype, test and improve. AI helps at every step, but you make the decisions."
+              }
+            ]
+          }
+        ]
+      },
+      "creative": {
+        "name": "Creativity",
+        "desc": "Drawings, music, videos and stories with AI",
+        "lessons": [
+          {
+            "title": "AI and creativity",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI drew a picture from your description. Whose idea was it?",
+                "options": [
+                  "Only the AI’s",
+                  "Yours — AI helped draw it",
+                  "Nobody’s",
+                  "The internet’s"
+                ],
+                "answer": 1,
+                "hints": [
+                  "How did AI know what exactly to draw?",
+                  "Without your description there would be no picture."
+                ],
+                "explanation": "The idea is yours: you described what you wanted to see. AI was a tool, like a brush or a pencil — just a very fast one."
+              },
+              {
+                "difficulty": "medium",
+                "question": "How can you make an AI picture closer to what you imagine?",
+                "options": [
+                  "Write one word",
+                  "Press the button many times",
+                  "Describe the style, colors, mood and details",
+                  "Write in capital letters"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI can’t see the picture in your head.",
+                  "The more details you describe, the more accurate the result."
+                ],
+                "explanation": "AI draws what it understood from the description. Style (cartoon, watercolor), colors, mood and details help it match your idea."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "You made a picture with AI for a drawing contest. What’s the honest thing to do?",
+                "options": [
+                  "Say you used AI and explain what you did yourself",
+                  "Present the work as entirely yours",
+                  "Tell nobody anything",
+                  "Change the colors a bit so you don’t have to say"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Think whether it’s fair to those who drew by hand.",
+                  "Honesty means saying which part is yours and which is AI’s."
+                ],
+                "explanation": "The honest way is to say you used AI and explain your part: the idea, the description, the edits. Many contests have special rules for this."
+              }
+            ]
+          },
+          {
+            "title": "Music, video and stories",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "AI helped you come up with a melody. What’s still your job?",
+                "options": [
+                  "Nothing",
+                  "Just press “Play”",
+                  "Delete the music",
+                  "Pick what sounds good and add your own ideas"
+                ],
+                "answer": 3,
+                "hints": [
+                  "Who decides whether you like the melody?",
+                  "AI suggests options — a person chooses and improves."
+                ],
+                "explanation": "AI can suggest melodies, but the taste is yours. You pick the best, change it and add your ideas — that’s how it becomes your music."
+              },
+              {
+                "difficulty": "medium",
+                "question": "You’re filming a video for your blog. Where will AI help the most?",
+                "options": [
+                  "Live the story for you",
+                  "Make subtitles and suggest title ideas",
+                  "Replace you on camera",
+                  "Watch the video instead of your viewers"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Viewers are interested in you — what can you hand to a helper?",
+                  "Think about boring but useful work."
+                ],
+                "explanation": "AI is great at routine work: subtitles, title ideas, editing tips. The story, emotions and personality are why people watch you."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "AI wrote a video script, but it doesn’t sound “like you”. Best next step?",
+                "options": [
+                  "Publish it as is",
+                  "Give up on the video",
+                  "Give AI examples of your phrases, ask it to rewrite in your style, then edit it yourself",
+                  "Ask a friend to voice it instead of you"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI doesn’t know how you usually talk.",
+                  "Show AI your style, and make the final version yourself."
+                ],
+                "explanation": "You can “tune” AI to your style by showing it examples. But you have the final word: edit the text so it sounds natural."
+              }
+            ]
+          }
+        ]
+      },
+      "science": {
+        "name": "Science & nature",
+        "desc": "Space, animals and experiments with AI",
+        "lessons": [
+          {
+            "title": "AI in science",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Scientists use AI to find new planets in telescope images. Why is AI useful?",
+                "options": [
+                  "It quickly scans millions of images",
+                  "It flies into space",
+                  "It invents planets",
+                  "It replaces the telescope"
+                ],
+                "answer": 0,
+                "hints": [
+                  "There are so many images a person couldn’t look through them in a lifetime.",
+                  "AI shines when huge amounts of data need to be processed fast."
+                ],
+                "explanation": "AI quickly finds what might be a planet among millions of images. Then scientists check the most interesting finds."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI identified a bird species from a photo. How can you check if it’s right?",
+                "options": [
+                  "Believe it right away",
+                  "Compare with a bird guide or ask an expert",
+                  "Ask AI again",
+                  "Photograph a different bird"
+                ],
+                "answer": 1,
+                "hints": [
+                  "You need an independent source, not the same AI.",
+                  "Where are verified bird descriptions collected?"
+                ],
+                "explanation": "AI can mix up similar species. The reliable way is to compare with a field guide or encyclopedia, or ask a bird expert. Real scientists do the same."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "An AI weather forecast says: “80% chance of rain tomorrow.” What does it mean?",
+                "options": [
+                  "It will definitely rain",
+                  "It definitely won’t rain",
+                  "Rain is very likely but not guaranteed",
+                  "The AI is broken"
+                ],
+                "answer": 2,
+                "hints": [
+                  "80% is not 100%.",
+                  "Imagine 10 similar days: on how many of them would it rain?"
+                ],
+                "explanation": "An 80% chance means that on about 8 out of 10 similar days it rained. It probably will — better take an umbrella — but there’s no guarantee. AI talks about chances, not the exact future."
+              }
+            ]
+          },
+          {
+            "title": "Exploring nature with AI",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "You want to know why leaves turn yellow in autumn. What’s the best way to ask AI?",
+                "options": [
+                  "“Leaves”",
+                  "“Autumn”",
+                  "“Yellow”",
+                  "“Explain in simple words why leaves turn yellow in autumn and give an example”"
+                ],
+                "answer": 3,
+                "hints": [
+                  "One word isn’t a question.",
+                  "A good question says what you want to know and how to explain it."
+                ],
+                "explanation": "A full question asking for a simple explanation gets a clear answer. In short: in autumn the green chlorophyll in leaves breaks down and the yellow pigments show."
+              },
+              {
+                "difficulty": "medium",
+                "question": "AI wrote in your report: “Whales are big fish.” What will you do?",
+                "options": [
+                  "Believe it — AI knows",
+                  "Check it: whales are mammals, so AI was wrong",
+                  "Copy it into the report as is",
+                  "Ask AI “really?” and trust the answer"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Remember: how do whales breathe and feed their babies?",
+                  "Whales breathe air and feed their babies milk."
+                ],
+                "explanation": "Whales are mammals: they breathe air and feed their babies milk. AI got it wrong, so facts for a report always need checking in a textbook or encyclopedia."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "You’re doing a school project on how clean a river’s water is. How should you use AI?",
+                "options": [
+                  "Collect your own data and ask AI to help analyze and present it",
+                  "Ask AI to invent the measurement results",
+                  "Copy someone else’s project",
+                  "Don’t check anything"
+                ],
+                "answer": 0,
+                "hints": [
+                  "A science project is built on real data.",
+                  "AI can help with analysis, but shouldn’t invent facts."
+                ],
+                "explanation": "Real science means real data. Take your own measurements, and use AI to build a chart, find patterns and present your conclusions nicely."
+              }
+            ]
+          }
+        ]
+      },
+      "sport": {
+        "name": "Sport & health",
+        "desc": "Smartwatches, match analysis and training with AI",
+        "lessons": [
+          {
+            "title": "AI in sport",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "A smartwatch counts your steps and heart rate. What does AI do with this data?",
+                "options": [
+                  "Finds patterns and gives tips",
+                  "Runs for you",
+                  "Deletes the data",
+                  "Nothing"
+                ],
+                "answer": 0,
+                "hints": [
+                  "Why does a watch need so many numbers about you?",
+                  "For example, the watch can notice you haven’t moved much today."
+                ],
+                "explanation": "AI finds patterns in the data: how much you move, how you sleep, how your heart rate changes — and suggests what to improve."
+              },
+              {
+                "difficulty": "medium",
+                "question": "A football club analyzes matches with AI. What can AI find?",
+                "options": [
+                  "Who will win in 10 years",
+                  "Which players lose the ball most often and in which zone",
+                  "How to score without training",
+                  "Who is the best friend on the team"
+                ],
+                "answer": 1,
+                "hints": [
+                  "AI analyzes what already happened in matches.",
+                  "Look for an answer that can be counted from game recordings."
+                ],
+                "explanation": "AI finds patterns in match recordings: where the ball is lost, where goals come from. This helps the coach, but AI can’t count the future or friendship."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "An AI coach advises a 12-year-old to train 5 hours every day. What should you do?",
+                "options": [
+                  "Obey the AI — it’s the coach",
+                  "Talk to an adult coach or doctor — the AI may have ignored your age",
+                  "Train even more",
+                  "Quit sport"
+                ],
+                "answer": 1,
+                "hints": [
+                  "That schedule is hard even for adult athletes.",
+                  "When it comes to health, an adult specialist has the final word."
+                ],
+                "explanation": "AI can give unsuitable advice, especially if it doesn’t know your age and health. On health questions, always check with a coach, a doctor or your parents."
+              }
+            ]
+          },
+          {
+            "title": "Train with AI",
+            "tasks": [
+              {
+                "difficulty": "easy",
+                "question": "Which request will give a useful warm-up plan?",
+                "options": [
+                  "“Warm-up”",
+                  "“Sport!!!”",
+                  "“Make a 10-minute warm-up before football for a 6th grader”",
+                  "“Make me strong”"
+                ],
+                "answer": 2,
+                "hints": [
+                  "AI needs to know which sport and who the warm-up is for.",
+                  "Find the request with time, sport and age."
+                ],
+                "explanation": "A good request includes the time, the sport and the age. Then the warm-up will be suitable and safe for you."
+              },
+              {
+                "difficulty": "medium",
+                "question": "An AI app says you ran 50 km in 10 minutes. What’s wrong?",
+                "options": [
+                  "Everything is correct",
+                  "Nobody can run that fast — the data is wrong, check the sensor",
+                  "You broke a world record",
+                  "The watch is just new"
+                ],
+                "answer": 1,
+                "hints": [
+                  "Compare with a car: how far does it go in 10 minutes in a city?",
+                  "If a result is impossible, the data is wrong."
+                ],
+                "explanation": "50 km in 10 minutes is the speed of a car on a highway. The AI calculated from bad sensor data. If a result looks impossible — check the data."
+              },
+              {
+                "difficulty": "challenge",
+                "question": "A team wants to use AI to choose tactics for a match. Who makes the decision?",
+                "options": [
+                  "The AI — it’s smarter",
+                  "The opponents",
+                  "Nobody",
+                  "The coach and the team, while AI provides ideas and stats"
+                ],
+                "answer": 3,
+                "hints": [
+                  "AI doesn’t know the team’s mood or who is in shape today.",
+                  "AI is a helper; a person is responsible for the decision."
+                ],
+                "explanation": "AI is good at stats and suggesting options, but the coach and players decide: they know the team, the opponent and the situation on the pitch."
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

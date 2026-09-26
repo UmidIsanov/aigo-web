@@ -3,8 +3,8 @@ import { Info } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Eyebrow } from '../ui';
 
-/** WEF job-market facts. `compact` is the onboarding version without the section chrome. */
-export function Stats({ compact }: { compact?: boolean }) {
+/** WEF job-market facts. */
+export function Stats() {
   const t = useTranslations('stats');
   const facts = [
     { value: t('jobsNew'), label: t('jobsNewLabel'), color: 'text-lime' },
@@ -13,24 +13,15 @@ export function Stats({ compact }: { compact?: boolean }) {
   ];
 
   const grid = (
-    <div className={clsx('grid gap-3', compact ? 'sm:grid-cols-3' : 'md:grid-cols-3 md:gap-4')}>
+    <div className="grid gap-3 md:grid-cols-3 md:gap-4">
       {facts.map((f) => (
         <div key={f.value} className="rounded-3xl bg-ink-2 p-6">
-          <p className={clsx('font-display font-bold', f.color, compact ? 'text-3xl' : 'text-4xl sm:text-5xl')}>{f.value}</p>
+          <p className={clsx('font-display text-4xl font-bold sm:text-5xl', f.color)}>{f.value}</p>
           <p className="mt-3 leading-snug text-white/85">{f.label}</p>
         </div>
       ))}
     </div>
   );
-
-  if (compact) {
-    return (
-      <div className="rounded-[28px] bg-ink p-4 sm:p-5">
-        {grid}
-        <p className="mt-4 px-1 text-xs text-ink-muted">{t('source')}</p>
-      </div>
-    );
-  }
 
   return (
     <section className="bg-ink py-20 text-white">
